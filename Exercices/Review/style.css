@@ -1,0 +1,40 @@
+
+
+#mainDiv{
+    background-color: rgb(32, 31, 31);
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+h1, h2{
+    color: white ;
+    transition: 2s;
+}
+
+#reviewDiv{
+    background-color: rgb(202, 195, 195);
+    height: 300px;
+}
+
+img{
+    padding-top: 10px;
+    width: 120px;
+    transition: 0.5s;
+}
+img:hover{
+    width: 150px;
+    transition: 0.5s;
+}
+
+button{
+    margin: 5px;
+    padding: 10px;
+    transition: 3s;
+    border: none;
+}
+h2:active{
+    transition: 1s;
+}

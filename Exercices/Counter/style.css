@@ -1,0 +1,27 @@
+p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+#mainDiv{
+    margin-left: 25%;
+    background-color: black;
+    height: 180px;
+    width: 50%;
+    align-content: center;
+    border-radius: 5px;
+}
+button{
+    text-align: center;
+    margin-left: 5px;
+    padding: 10px;
+    border: none;
+}
+#buttons{
+    background-color: grey;
+    text-align: center;
+}

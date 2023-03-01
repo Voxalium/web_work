@@ -1,0 +1,86 @@
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content{
+    background-color: plum;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover{
+    color: black;
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    border-radius: 12px;
+    height: 40px;
+    padding: 5px;
+    font-weight: bold;
+    width: 180px;
+    background-color: red;
+    color: white;
+}
+
+#mainDiv{
+    text-align: center;
+    background-color: rgb(155, 64, 152);
+    height: 180px;
+    overflow: auto;
+}
+
+#image{
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    transition: 0.5s;
+}
+
+#image:hover{
+    animation: rotation 0.5s infinite linear;
+
+}
+
+h2{
+    animation:  color-change 0.5s infinite;
+}
+
+@keyframes color-change {
+    0% {color: rgb(252, 0, 218);}
+    50% {color: rgb(128, 0, 255)}
+    100% {color: rgb(252, 0, 218);}
+}
+
+@keyframes rotation {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+
+
+    
+}
+h1{
+    color: beige;
+    text-shadow: 1px 1px 5px black;
+    
+}
