@@ -1,3 +1,6 @@
+
+const name = "gfx";
+
 function clearScreen(ctx, canvas){
     this.ctx = ctx;
     this.canvas = canvas;
@@ -6,14 +9,17 @@ function clearScreen(ctx, canvas){
 }
 
 function drawRect(x, y, w, h, color, ctx){
-    this.x = x;
-    this.y = y;
-    this.w = w;
-    this.h = h;
-    this.color = color;
-    this.ctx = ctx;
+    
     ctx.fillStyle = color;
     ctx.fillRect(x,y,w,h);    
+    
+    return{
+        x: x,
+        y: y,
+        w: w,
+        h: h,
+        color: color
+    }
 };
 
 function drawText(str, x, y, color, ctx){
@@ -25,3 +31,5 @@ function drawText(str, x, y, color, ctx){
     ctx.fillStyle = color;
     ctx.fillText(str,x,y);
 }
+
+export{name, clearScreen, drawRect, drawText};
