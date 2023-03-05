@@ -1,4 +1,4 @@
-export{name, createCanvas, clearScreen, drawRect, drawText};
+export{name, createCanvas, clearScreen, drawRect, drawCircle, drawText};
 
 const name = "gfx";
 
@@ -14,9 +14,11 @@ function createCanvas(w, h){
     const ctx = canvas.getContext("2d");
 
     return{
-        ctx: ctx
+        ctx: ctx,
+        canvas: canvas
     }
 }
+
 
 function clearScreen(ctx, canvas){
     ctx.clearRect(0,0, canvas.width, canvas.height);
@@ -31,8 +33,19 @@ function drawRect(x, y, w, h, color, ctx){
         y: y,
         w: w,
         h: h,
-        color: color,
-        ctx: ctx
+    }
+}
+
+function drawCircle(x, y , r, color, ctx ){
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, 2*Math.PI);
+    ctx.stroke();
+
+    return{
+        x: x,
+        y: y,
+        r: r
     }
 }
 
