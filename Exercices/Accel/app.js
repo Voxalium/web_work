@@ -1,12 +1,14 @@
 import * as gfx from "../../Framework/gfx.js";
+import * as acc from "../../Framework/accel.js";
 
 const cv = gfx.createCanvas(600,400);
 
 
 function Update(){
+    c1.x = acc.linAccel(c1.x, p2.x, 1, 2);
+    c2.x = acc.linAccel(c2.x, p2.x, 2, 1);
 
-    c1.x = linAccel(c1.x, p2.x , 1, 2);
-    c2.x = linAccel(c2.x, p2.x , 2, 1);
+    
 } 
 
 function Draw(){
@@ -55,14 +57,4 @@ const c2 = {
     r: 10
 }
 
-function linAccel(p1, p2, start , end){
-    if( p1 < p2 / 2)
-    {
-        p1+= start;
-    }
-    else if(p1 < p2) {
-        p1+= end;
-    }
-    return p1;
-}
 
