@@ -1,11 +1,11 @@
 export{name, lin1, lin2, ease};
 
-const name = "acc";
+const name = "mov";
 
-function lin1(p1, p2, speed){
+function lin1(p1, p2, speed, progress){
     if(p1 < p2)
     {
-        p1+= speed;        
+        p1+= (speed * progress) * 0.1;        
     }
     return p1;
 }

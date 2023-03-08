@@ -1,6 +1,6 @@
 export{name,rectCol};
 
-const name = "collision";
+const name = "col";
 
 function rectCol(x1,y1,w1,h1,x2,y2,w2,h2){
     this.x1 = x1;
