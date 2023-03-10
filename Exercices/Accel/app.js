@@ -11,6 +11,8 @@ const c1 = new obj.circle(p1.x, p1.y, 10);
 const c2 = new obj.circle(p1.x, p1.y, 10);
 const c3 = new obj.circle(p1.x, p1.y, 10);
 
+const v1 = new obj.vector2(50,50,500,10);
+
 let x1 = 100;
 let y1 = 250;
 let x2 = 400;
@@ -39,6 +41,8 @@ function Draw(){
     gfx.drawCircle(c1.x + 5, c1.y + 25, c1.r, "blue", cv.ctx);
     gfx.drawCircle(c2.x + 5, c2.y + 50, c2.r, "blue", cv.ctx);   
     gfx.drawCircle(c3.x + 5, c3.y + 75, c3.r, "blue", cv.ctx);   
+
+    gfx.drawVector2(v1, "black", cv.ctx);
 
 }
 

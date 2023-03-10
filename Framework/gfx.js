@@ -1,4 +1,4 @@
-export{name, createCanvas, clearScreen, drawRect, drawCircle, drawText, drawLine};
+export{name, createCanvas, clearScreen, drawRect, drawCircle, drawText, drawLine, drawVector2};
 
 const name = "gfx";
 
@@ -69,3 +69,10 @@ function drawLine(x1, y1, x2, y2, color, ctx){
     ctx.stroke();
 }
 
+function drawVector2(vector2, color, ctx){
+    ctx.strokeStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(vector2.x1, vector2.y1);
+    ctx.lineTo(vector2.x2, vector2.y2);
+    ctx.stroke();
+}
