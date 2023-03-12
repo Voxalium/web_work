@@ -36,11 +36,19 @@ function drawRect(x, y, w, h, color, ctx){
     }
 }
 
-function drawCircle(x, y , r, color, ctx ){
+function drawCircle(x, y , r, color, fill, ctx ){
     ctx.strokeStyle = color;
+    ctx.fillStyle = color;
     ctx.beginPath();
     ctx.arc(x, y, r, 0, 2*Math.PI);
-    ctx.stroke();
+    if(fill == "fill"){
+        ctx.fill();
+        ctx.stroke();
+
+    }
+    if(fill == "no-fill"){
+        ctx.stroke();
+    }
 
     return{
         x: x,

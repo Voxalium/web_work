@@ -4,12 +4,17 @@ import * as inp from "../../Framework/inp.js";
 const cv = gfx.createCanvas(600,400);
 
 const cursor  = new obj.circle(10,10,10);
+const target  = new obj.circle(10,10,50);
 
+target.x = randomTargetPos(cv.canvas, target.r).x;
+target.y = randomTargetPos(cv.canvas, target.r).y;
 function Update(progress){
 }
+drawTarget();
 
 function Draw(){
     gfx.clearScreen(cv.ctx, cv.canvas);
+    drawTarget();
     drawCursor();
 
 }
@@ -39,7 +44,19 @@ let lastRender = 0;
 requestAnimationFrame(Game);
 
 function drawCursor(){
-    gfx.drawCircle(cursor.x, cursor.y, cursor.r, "red", cv.ctx);
+    gfx.drawCircle(cursor.x, cursor.y, cursor.r, "red", "no-fill", cv.ctx);
+}
+function drawTarget(){
+    gfx.drawCircle(target.x, target.y, target.r, "black", "fill", cv.ctx);
+}
+
+function randomTargetPos(canvas, r){
+    let x = Math.floor(Math.random() * ((canvas.width-r) - r ) + r);
+    let y = Math.floor(Math.random() * ((canvas.height-r) - r) + r); 
+    return{
+        x: x,
+        y: y
+    }
 }
 
 
