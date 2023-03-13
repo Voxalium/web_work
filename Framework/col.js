@@ -1,4 +1,4 @@
-export{name,rectCol};
+export{name, rectCol, circleCol};
 
 const name = "col";
 
@@ -20,5 +20,14 @@ function rectCol(x1,y1,w1,h1,x2,y2,w2,h2){
         {
             return true;
         }
-         
+}
+
+function circleCol(c1, c2){
+    let dx = c1.x - c2.x;
+    let dy = c1.y - c2.y;
+    let distance = Math.sqrt(dx * dx + dy * dy);
+    
+    if( distance < c1.r + c2.r){
+        return true;
+    }
 }
