@@ -7,6 +7,7 @@ const cv = gfx.createCanvas(600,400);
 
 const cursor  = new obj.circle(10,10,5);
 const target  = new obj.circle(10,10,50);
+let score = -1;
 
 let lastRender = 0;
 
@@ -18,6 +19,7 @@ function Update(progress){
     if(click && checkCol){
         target.x = randomTargetPos(cv.canvas, target.r).x;
         target.y = randomTargetPos(cv.canvas, target.r).y;
+        score++;
     }
     if(checkCol) console.log("col");
 
@@ -27,7 +29,7 @@ function Draw(){
     gfx.clearScreen(cv.ctx, cv.canvas);
 
     drawTarget();
-    
+    gfx.drawText("Score: " + score, 10, 20, 18, "black", cv.ctx);
     drawCursor();
 }
 
