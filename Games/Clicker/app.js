@@ -5,7 +5,7 @@ import * as col from "../../Framework/col.js";
 
 const cv = gfx.createCanvas(600,400);
 
-const cursor  = new obj.circle(10,10,5);
+const cursor  = new obj.circle(10,10,2);
 const target  = new obj.circle(10,10,50);
 let score = -1;
 
@@ -14,15 +14,25 @@ let lastRender = 0;
 let checkCol = true;
 let click = true;
 
+let time = 5;
+
 function Update(progress){
     checkCol = col.circleCol(cursor, target);
     if(click && checkCol){
         target.x = randomTargetPos(cv.canvas, target.r).x;
         target.y = randomTargetPos(cv.canvas, target.r).y;
+        if(target.r >= 5){
+            target.r--;
+        }
         score++;
-    }
+        time++;
+    }else if(click) time--;
     if(checkCol) console.log("col");
 
+    if(time == 0){
+        alert("Timeout !" + "\n" + "Score: " + score);
+        location.reload();
+    }
 }
 
 function Draw(){
@@ -30,6 +40,8 @@ function Draw(){
 
     drawTarget();
     gfx.drawText("Score: " + score, 10, 20, 18, "black", cv.ctx);
+    gfx.drawText("Time: " + (time - 1), 10, 40, 18, "black", cv.ctx);
+
     drawCursor();
 }
 
@@ -58,6 +70,7 @@ function Game(timestamp){
 
 requestAnimationFrame(Game);
 
+
 function drawCursor(){
     gfx.drawCircle(cursor.x, cursor.y, cursor.r, "red", "no-fill", cv.ctx);
 }
@@ -75,4 +88,8 @@ function randomTargetPos(canvas, r){
     }
 }
 
+function timer(){
+    time--;
+}
 
+setInterval(timer, 1000 );
