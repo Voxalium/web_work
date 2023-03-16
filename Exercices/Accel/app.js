@@ -38,9 +38,9 @@ function Draw(){
     gfx.drawRect(p1.x, p1.y, p1.w, p1.h, "black", cv.ctx);
     gfx.drawRect(p2.x, p2.y, p2.w, p2.h, "black", cv.ctx);
     
-    gfx.drawCircle(c1.x + 5, c1.y + 25, c1.r, "blue", cv.ctx);
-    gfx.drawCircle(c2.x + 5, c2.y + 50, c2.r, "blue", cv.ctx);   
-    gfx.drawCircle(c3.x + 5, c3.y + 75, c3.r, "blue", cv.ctx);   
+    gfx.drawCircle(c1.x + 5, c1.y + 25, c1.r, "blue", "fill", cv.ctx);
+    gfx.drawCircle(c3.x + 5, c3.y + 75, c3.r, "blue", "fill", cv.ctx);   
+    gfx.drawCircle(c2.x + 5, c2.y + 50, c2.r, "blue", "fill", cv.ctx);   
 
     gfx.drawVector2(v1, "black", cv.ctx);
 

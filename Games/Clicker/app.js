@@ -14,7 +14,7 @@ let lastRender = 0;
 let checkCol = true;
 let click = true;
 
-let time = 5;
+let time = 15;
 
 function Update(progress){
     checkCol = col.circleCol(cursor, target);
@@ -26,10 +26,10 @@ function Update(progress){
         }
         score++;
         time++;
-    }else if(click) time--;
+    }else if(click) time -= 5;
     if(checkCol) console.log("col");
 
-    if(time == 0){
+    if(time <= 0){
         alert("Timeout !" + "\n" + "Score: " + score);
         location.reload();
     }
@@ -89,7 +89,7 @@ function randomTargetPos(canvas, r){
 }
 
 function timer(){
-    time--;
+    time --;
 }
 
 setInterval(timer, 1000 );
