@@ -1,4 +1,4 @@
-export{name, createCanvas, clearScreen, drawRect, drawRectObj, drawCircle, drawText, drawLine, drawVector2};
+export{name, createCanvas, clearScreen, drawDialogue, drawRect, drawRectObj, drawCircle, drawText, drawLine, drawVector2};
 
 const name = "gfx";
 
@@ -22,6 +22,11 @@ function createCanvas(w, h){
 
 function clearScreen(ctx, canvas){
     ctx.clearRect(0,0, canvas.width, canvas.height);
+}
+
+function drawDialogue(text, dialogueBox, ctx){
+    drawRectObj(dialogueBox, ctx);
+    drawText(text, dialogueBox.x + 5, dialogueBox.y + 20, 18, "white", ctx)
 }
 
 
