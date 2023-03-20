@@ -34,12 +34,8 @@ function Game(){
         gfx.drawDialogue(data[Object.keys(data)[i]], dialogueBox1,cv.ctx);
     }else EOL = true;
 
-
-    
-
     console.log(Object.keys(data)[i] + " i:" + i);
     requestAnimationFrame(Game);
-    
 }
 requestAnimationFrame(Game);
 
