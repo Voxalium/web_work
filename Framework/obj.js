@@ -1,4 +1,4 @@
-export {name, circle, rectangle, vector2, text};
+export {name, circle, rectangle, line, text};
 
 const name = "obj";
 
@@ -19,7 +19,7 @@ class rectangle{
     }
 }
 
-class vector2{
+class line{
     constructor(x1, y1, x2, y2){
         this.x1 = x1;
         this.y1 = y1;

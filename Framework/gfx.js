@@ -1,4 +1,4 @@
-export{name, createCanvas, clearScreen, drawDialogue, drawRect, drawRectObj, drawCircle, drawText, drawLine, drawVector2};
+export{name, createCanvas, clearScreen, drawDialogue, drawRect, drawRectObj, drawCircle, drawText, drawLine, drawLineO, drawVector2};
 
 const name = "gfx";
 
@@ -85,6 +85,14 @@ function drawLine(x1, y1, x2, y2, color, ctx){
     ctx.beginPath();
     ctx.moveTo(x1, y1);
     ctx.lineTo(x2, y2);
+    ctx.stroke();
+}
+
+function drawLineO(line, color, ctx){
+    ctx.strokeStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(line.x1, line.y1);
+    ctx.lineTo(line.x2, line.y2);
     ctx.stroke();
 }
 
