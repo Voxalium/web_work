@@ -7,12 +7,13 @@ const dialogueBox1 = new obj.rectangle(cv.canvas.width/2 - 250  , cv.canvas.heig
 let sqr = new obj.rectangle(10,10,10,10);
 
 let i = 0;
+let EOL = false;
 
 let vx = 0;
 let vy = 0;
 
 document.body.addEventListener("keypress",(e) =>{
-    if(e.code == "Space"){
+    if(e.code == "Space" && !EOL){
         return i++;
     }
 })
@@ -29,8 +30,16 @@ function Update(){
 function Game(){
     Update();
     Draw();
-    gfx.drawDialogue(data[Object.keys(data)[i]], dialogueBox1,cv.ctx);
+    if(Object.keys(data)[i] > "end"){
+        gfx.drawDialogue(data[Object.keys(data)[i]], dialogueBox1,cv.ctx);
+    }else EOL = true;
+
+
+    
+
+    console.log(Object.keys(data)[i] + " i:" + i);
     requestAnimationFrame(Game);
+    
 }
 requestAnimationFrame(Game);
 
