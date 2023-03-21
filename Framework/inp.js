@@ -10,5 +10,9 @@ function getMousePos(canvas, e){
         x: x,
         y: y
     }
-  
+ 
+}
+
+function basicInput(){
+    //basic wasd / zqsd
 }
