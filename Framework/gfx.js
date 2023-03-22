@@ -1,4 +1,4 @@
-export{name, createCanvas, clearScreen, drawDialogue, drawRect, drawRectObj, drawCircle, drawText, drawLine, drawLineO, drawVector2};
+export{name, createCanvas, clearScreen, drawDialogue, drawRect, drawCircle, drawText, drawLine, drawLineO, drawVector2};
 
 const name = "gfx";
 
@@ -19,31 +19,17 @@ function createCanvas(w, h){
     }
 }
 
-
 function clearScreen(ctx, canvas){
     ctx.clearRect(0,0, canvas.width, canvas.height);
 }
 
 function drawDialogue(text, dialogueBox, ctx){
-    drawRectObj(dialogueBox, ctx);
+    drawRect(dialogueBox, "black", ctx);
     drawText(text, dialogueBox.x + 5, dialogueBox.y + 20, 18, "white", ctx)
 }
 
-
-function drawRect(x, y, w, h, color, ctx){
-    ctx.fillStyle = color;
-    ctx.fillRect(x,y,w,h);
-
-    return{
-        x: x,
-        y: y,
-        w: w,
-        h: h
-    }
-}
-
-function drawRectObj(rect, ctx){
-    ctx.fillStyle = "black";
+function drawRect(rect, col,  ctx){
+    ctx.fillStyle = col;
     ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
 }
 
