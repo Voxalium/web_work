@@ -1,4 +1,4 @@
-export{name, createCanvas, clearScreen, drawDialogue, drawRect, drawCircle, drawText, drawLine, drawLineO, drawVector2};
+export{name, createCanvas, createSprite,clearScreen, drawDialogue, drawRect, drawCircle, drawText, drawLine, drawLineO, drawVector2, drawSprite};
 
 const name = "gfx";
 
@@ -17,6 +17,14 @@ function createCanvas(w, h){
         ctx: ctx,
         canvas: canvas
     }
+}
+
+function createSprite(sprite){
+    const img = new Image();
+    img.src = sprite.img;
+    return img;
+        
+    
 }
 
 function clearScreen(ctx, canvas){
@@ -88,4 +96,8 @@ function drawVector2(vector2, color, ctx){
     ctx.moveTo(vector2.x1, vector2.y1);
     ctx.lineTo(vector2.x2, vector2.y2);
     ctx.stroke();
+}
+
+function drawSprite(sprite, ctx){
+    ctx.drawImage(sprite, sprite.x, sprite.y);
 }

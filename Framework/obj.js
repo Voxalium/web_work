@@ -1,4 +1,4 @@
-export {name, circle, rectangle, line, text};
+export {name, circle, rectangle, line, text, sprite};
 
 const name = "obj";
 
@@ -33,3 +33,12 @@ class text{
         this.txt = txt;
     }
 }
+
+class sprite{
+    constructor(x, y, img){
+        this.x = x;
+        this.y = y;
+        this.img = img;
+    }
+}
+
