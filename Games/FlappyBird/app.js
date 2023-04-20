@@ -1,6 +1,3 @@
-
-
-
 //------------------------CANVAS-----------------------
 const canvas = document.createElement("canvas");    
 const ctx = canvas.getContext("2d");
@@ -11,16 +8,12 @@ document.body.appendChild(canvas);
 //-----------------------------------------------------
 //------------------------GAMELOOP---------------------
 
-
-
 function Update(){
     checkCol();
     pipeCol();
     moveBird();
     if(isGameOver){
-        gameOverSfx.play();
-        alert("GAME OVER");
-        location.reload();
+        window.location.reload();
     }
     
     pipe.x = pipe.x - pipe.vx;
@@ -39,8 +32,6 @@ function Draw(){
     drawRect(bird.x, bird.y, bird.w, bird.h, "black", ctx);
     drawPipes();
     drawScore();
-
-
 }
 
 function Game(){
@@ -55,7 +46,6 @@ let isGameOver = false;
 let isCollided = false;
 let score = 0;
 const snd = new Audio("fx1.wav"); 
-const gameOverSfx = new Audio("impact.wav");
 
 //-----------------------------------------------------
 //------------------------BIRD-------------------------

@@ -4,16 +4,12 @@ import * as inp from "../../Framework/inp.js";
 import * as col from "../../Framework/col.js";
 
 const cv = gfx.createCanvas(600,400);
-
 const cursor  = new obj.circle(10,10,2);
 const target  = new obj.circle(10,10,50);
 let score = -1;
-
 let lastRender = 0;
-
 let checkCol = true;
 let click = true;
-
 let time = 15;
 
 function Update(progress){
@@ -30,18 +26,15 @@ function Update(progress){
     if(checkCol) console.log("col");
 
     if(time <= 0){
-        alert("Timeout !" + "\n" + "Score: " + score);
         location.reload();
     }
 }
 
 function Draw(){
     gfx.clearScreen(cv.ctx, cv.canvas);
-
     drawTarget();
     gfx.drawText("Score: " + score, 10, 20, 18, "black", cv.ctx);
     gfx.drawText("Time: " + (time - 1), 10, 40, 18, "black", cv.ctx);
-
     drawCursor();
 }
 
@@ -58,7 +51,6 @@ function Event(){
 }
 Event();
 
-
 function Game(timestamp){
     let progress = (timestamp - lastRender);
     Update(progress);
@@ -69,7 +61,6 @@ function Game(timestamp){
 }
 
 requestAnimationFrame(Game);
-
 
 function drawCursor(){
     gfx.drawCircle(cursor.x, cursor.y, cursor.r, "red", "no-fill", cv.ctx);
