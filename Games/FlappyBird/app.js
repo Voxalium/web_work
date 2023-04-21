@@ -21,7 +21,6 @@ function Update(){
         pipe.x = canvas.width - pipe.w;
         pipe.h = rdmPipeY();
         pipe.vx += 0.3;
-        snd.play();
         score++;
     }
 
@@ -45,7 +44,6 @@ requestAnimationFrame(Game);
 let isGameOver = false;
 let isCollided = false;
 let score = 0;
-const snd = new Audio("fx1.wav"); 
 
 //-----------------------------------------------------
 //------------------------BIRD-------------------------
