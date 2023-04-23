@@ -1,6 +1,7 @@
 
 const input = document.getElementById("input");
 const button = document.getElementById("genButton");
+const nbChar = document.getElementById("nbChar");
 
 const char = ['a','b','c','d','e',
               'f','g','h','i','j',
@@ -11,7 +12,11 @@ const char = ['a','b','c','d','e',
               '4','5','6','7','8',
               '9'] ;
 let password = [];
-let size = 8;
+let size = 6;
+
+nbChar.onchange = ()=>{
+    size = nbChar.value;
+} 
 
 function rng(){
     return Math.floor(Math.random()*char.length+1);
