@@ -1,53 +1,37 @@
+html{
+    height: 100%;
+}
+
 body{
-    background-color: #99152B;
+    background: url("../img/background2.jpg") no-repeat;
+    background-size: cover;
 }
 
 h1{
     font-size: 48px;
-    color: pink;
-    background-color: #E63754;
-    border-radius: 5px;
-    padding: 5px;
-    display: inline;
-    margin-left: 100px;
-}
-
-h2{
-    color: pink;
-    border: 1px bisque solid;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: left;
-    padding-left: 50px;
-}
-
-ul{
-    list-style-type: none;
-
-}
-
-nav li{
-    float: left;
-    width: 10%;
-    text-align: center;
+    padding-left: 10px ;
+    color: #f82828;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 nav{
-    width: 100%;
-    margin: 0 auto;
+    transition: 0.5s;
 }
-
+nav li{
+    display: inline;
+    font-size: larger;
+    padding-right: 10px;
+}
 nav a{
-    display: block;
     text-decoration: none;
     color: pink;
-    border-bottom: 2px solid bisque;
-    padding: 8px 0px;
+    padding: 0px 0px;
 }
 nav a:hover{
-    color: #99152B;
-    background-color: bisque;
+    color: bisque;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
+    transition: background-color 0.2s;
 }
 
 section a{
@@ -55,34 +39,41 @@ section a{
     color: pink;
     display: block;
     padding: 10px;
-    text-align: center;
-}
 
+}
 section a:hover{
-    color: #99152B;
-    background-color: bisque;
+    color:bisque;
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
+    transition: 0.2s;
 }
 
-div{
+img{
+    height: 24px;
+    vertical-align: middle;
+    padding-right: 50px;
+}
+
+#pContainer{
+    margin: auto;
+    width: 50%;
+    backdrop-filter: blur(2px);
+}
+.zoom{
     text-align: center;
+    font-size: 36px;
+    border-radius: 20px;
+    transition: 2s;
+    color:bisque;
+    transition: transform 1s;
 }
-
-
-#gamesLinks{
-    text-align: center;
+.zoom:hover{
+    transform: scale(1.1);
 }
-#gamesLinks a{
-    text-decoration: none;
-    color: white;
-    background-color:#E63754;
-    padding: 5px;
-    border-radius: 15px;
+#presentation{
+    background-color: #01010155;
+    border-radius: 10px;
 }
-#gamesLinks a:hover{
-    background-color: bisque;
-    color: #99152B;
-}
-#gamesLinks li{
-    padding: 10px;
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
