@@ -1,4 +1,4 @@
-export{name, createCanvas, createSprite,clearScreen, drawDialogue, drawRect, drawCircle, drawText, drawLine, drawLineO, drawVector2, drawSprite};
+export{name, createCanvas, createSprite, createTileMap,clearScreen, drawDialogue, drawRect, drawCircle, drawText, drawLine, drawLineO, drawVector2, drawSprite, drawTileMap};
 
 const name = "gfx";
 
@@ -23,8 +23,12 @@ function createSprite(sprite){
     const img = new Image();
     img.src = sprite.img;
     return img;
-        
-    
+}
+
+function createTileMap(tileMap){
+    const img = new Image();
+    img.src = tileMap.img;
+    return img;
 }
 
 function clearScreen(ctx, canvas){
@@ -100,4 +104,9 @@ function drawVector2(vector2, color, ctx){
 
 function drawSprite(sprite, ctx){
     ctx.drawImage(sprite, sprite.x, sprite.y);
+}
+
+function drawTileMap(tileMap, ctx){
+    ctx.drawImage(tileMap, tileMap.x, tileMap.y);
+    
 }

@@ -1,4 +1,4 @@
-export {name, circle, rectangle, line, text, sprite};
+export {name, circle, rectangle, line, text, sprite, tileMap};
 
 const name = "obj";
 
@@ -42,3 +42,10 @@ class sprite{
     }
 }
 
+class tileMap{
+    constructor(x, y, img){
+        this.x = x;
+        this.y = y;
+        this.img = img; 
+    }
+}
