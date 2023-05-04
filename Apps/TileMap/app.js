@@ -1,5 +1,3 @@
-
-
 import * as gfx from "../../Framework/gfx.js"
 import * as obj from "../../Framework/obj.js";
 
@@ -42,4 +40,27 @@ const map = {
     },
 };
 
+let gridC ={
+    x: 0,
+    y: 0,
+    size: 32,
+    offset: 0
+}
 
+let gridR ={
+    x: 0,
+    y: 0,
+    size: 32,
+    offset: 0
+}
+for(let c = 0; c < 16; c++){
+    gfx.drawLine(gridC.x, gridC.y, cv.canvas.width, gridC.offset, "black", cv.ctx);
+    gridC.y += gridC.size;
+    gridC.offset += gridC.size;
+}
+
+for(let c = 0; c < 20; c++){
+    gfx.drawLine(gridR.x, gridR.y, gridR.offset, cv.canvas.height, "black", cv.ctx);
+    gridR.x+= gridR.size;
+    gridR.offset += gridR.size;
+}
