@@ -1,8 +1,4 @@
-export{name, createCanvas, createSprite, createTileMap,clearScreen, drawDialogue, drawRect, drawCircle, drawText, drawLine, drawLineO, drawVector2, drawSprite, drawTileMap};
-
-const name = "gfx";
-
-function createCanvas(w, h){    
+export function createCanvas(w, h){    
     const canvas = document.createElement("canvas");
     document.body.appendChild(canvas);
     document.body.style.textAlign = "center";
@@ -19,33 +15,35 @@ function createCanvas(w, h){
     }
 }
 
-function createSprite(sprite){
+export function clearScreen(ctx, canvas){
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+}
+
+export function createSprite(sprite){
     const img = new Image();
     img.src = sprite.img;
     return img;
 }
 
-function createTileMap(tileMap){
+export function createTileMap(tileMap){
     const img = new Image();
     img.src = tileMap.img;
     return img;
 }
 
-function clearScreen(ctx, canvas){
-    ctx.clearRect(0,0, canvas.width, canvas.height);
-}
 
-function drawDialogue(text, dialogueBox, ctx){
+
+export function drawDialogue(text, dialogueBox, ctx){
     drawRect(dialogueBox, "black", ctx);
     drawText(text, dialogueBox.x + 5, dialogueBox.y + 20, 18, "white", ctx)
 }
-
-function drawRect(rect, col,  ctx){
+//-------------------------------DRAW SHAPE-------------------------------------------
+export function drawRect(rect, col,  ctx){
     ctx.fillStyle = col;
     ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
 }
 
-function drawCircle(x, y , r, color, fill, ctx ){
+export function drawCircle(x, y , r, color, fill, ctx ){
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
     ctx.beginPath();
@@ -53,12 +51,12 @@ function drawCircle(x, y , r, color, fill, ctx ){
     if(fill == "fill"){
         ctx.fill();
         ctx.stroke();
-
+        
     }
     if(fill == "no-fill"){
         ctx.stroke();
     }
-
+    
     return{
         x: x,
         y: y,
@@ -66,19 +64,7 @@ function drawCircle(x, y , r, color, fill, ctx ){
     }
 }
 
-function drawText(str, x, y, s, color, ctx){
-    ctx.font = "bold " + s +"px" + " serif";
-    ctx.fillStyle = color;
-    ctx.fillText(str,x,y);
-
-    return{
-        str: str,
-        x: x,
-        y: y,
-    }
-}
-
-function drawLine(x1, y1, x2, y2, color, ctx){
+export function drawLine(x1, y1, x2, y2, color, ctx){
     ctx.strokeStyle = color;
     ctx.beginPath();
     ctx.moveTo(x1, y1);
@@ -86,7 +72,7 @@ function drawLine(x1, y1, x2, y2, color, ctx){
     ctx.stroke();
 }
 
-function drawLineO(line, color, ctx){
+export function drawLineO(line, color, ctx){
     ctx.strokeStyle = color;
     ctx.beginPath();
     ctx.moveTo(line.x1, line.y1);
@@ -94,7 +80,8 @@ function drawLineO(line, color, ctx){
     ctx.stroke();
 }
 
-function drawVector2(vector2, color, ctx){
+
+export function drawVector2(vector2, color, ctx){
     ctx.strokeStyle = color;
     ctx.beginPath();
     ctx.moveTo(vector2.x1, vector2.y1);
@@ -102,11 +89,23 @@ function drawVector2(vector2, color, ctx){
     ctx.stroke();
 }
 
-function drawSprite(sprite, ctx){
+export function drawText(str, x, y, s, color, ctx){
+    ctx.font = "bold " + s +"px" + " serif";
+    ctx.fillStyle = color;
+    ctx.fillText(str,x,y);
+    
+    return{
+        str: str,
+        x: x,
+        y: y,
+    }
+}
+
+export function drawSprite(sprite, ctx){
     ctx.drawImage(sprite, sprite.x, sprite.y);
 }
 
-function drawTileMap(tileMap, ctx){
+export function drawTileMap(tileMap, ctx){
     ctx.drawImage(tileMap, tileMap.x, tileMap.y);
     
 }
