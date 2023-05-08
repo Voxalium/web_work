@@ -1,8 +1,4 @@
-export{name, getMousePos};
-
-const name = "inp";
-
-function getMousePos(canvas, e){
+export function getMousePos(canvas, e){
     let r = canvas.getBoundingClientRect();
     let x = e.clientX - r.left;
     let y = e.clientY - r.top;
@@ -10,9 +6,4 @@ function getMousePos(canvas, e){
         x: x,
         y: y
     }
- 
-}
-
-function basicInput(){
-    //basic wasd / zqsd
 }
