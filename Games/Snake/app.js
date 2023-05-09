@@ -1,7 +1,6 @@
-import * as gfx from "../../Framework/gfx.js";
-import * as obj from "../../Framework/obj.js";
+import * as vframe from "../../Framework/vframe.js";
 
-const cv = gfx.createCanvas(400,400);
+const cv = vframe.gfx.createCanvas(400,400);
 //-----------------------------------------------------------------
 //------------------------------GLOBAL-----------------------------
 let speed = 7;
@@ -35,16 +34,16 @@ let snake = {
 function drawSnake(){
     for(let i = 0; i < snakeParts.length; i++){
         let part=snakeParts[i];
-        let snakeRect = new obj.rectangle(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
-        gfx.drawRect(snakeRect,"green", cv.ctx);
+        let snakeRect = new vframe.obj.rectangle(part.x * tileCount, part.y * tileCount, tileSize, tileSize);
+        vframe.gfx.drawRect(snakeRect,"green", cv.ctx);
     }
     snakeParts.push(new snakePart(snake.x, snake.y));
     if(snakeParts.length > tailLength){
         snakeParts.shift();
     }
-    let snakeHead = new obj.rectangle(snake.x * tileCount, snake.y * tileCount, tileSize, tileSize);
+    let snakeHead = new vframe.obj.rectangle(snake.x * tileCount, snake.y * tileCount, tileSize, tileSize);
 
-    gfx.drawRect(snakeHead, "#082404", cv.ctx );
+    vframe.gfx.drawRect(snakeHead, "#082404", cv.ctx );
 }
 function moveSnake(){
     snake.x = snake.x + snake.vx;
@@ -57,18 +56,18 @@ let food = {
     y: 5
 }
 function drawFood(){
-    let foodRect = new obj.rectangle(food.x*tileCount, food.y*tileCount, tileSize, tileSize);
-    gfx.drawRect(foodRect, "red", cv.ctx);
+    let foodRect = new vframe.obj.rectangle(food.x*tileCount, food.y*tileCount, tileSize, tileSize);
+    vframe.gfx.drawRect(foodRect, "red", cv.ctx);
 }
 //-----------------------------------------------------------------
 //------------------------------SCORE------------------------------
 function drawScore(){
-    gfx.drawText("Score: " + score, 10, 30, 16,"black", cv.ctx);
+    vframe.gfx.drawText("Score: " + score, 10, 30, 16,"black", cv.ctx);
 }
 //-----------------------------------------------------------------
 //------------------------------GAMELOOP---------------------------
 function Draw(){
-    gfx.clearScreen(cv.ctx, cv.canvas);
+    vframe.gfx.clearScreen(cv.ctx, cv.canvas);
     drawSnake();
     drawFood();
     drawScore();
