@@ -1,10 +1,6 @@
+import * as vframe from "../../Framework/vframe.js"
 //------------------------CANVAS-----------------------
-const canvas = document.createElement("canvas");    
-const ctx = canvas.getContext("2d");
-canvas.style.backgroundColor = "grey";
-canvas.width = 600;
-canvas.height = 400;
-document.body.appendChild(canvas);
+const cv = vframe.gfx.createCanvas(600,400);
 //-----------------------------------------------------
 //------------------------GAMELOOP---------------------
 
@@ -13,12 +9,11 @@ function Update(){
     pipeCol();
     moveBird();
     if(isGameOver){
-        window.location.reload();
+       window.location.reload();
     }
-    
     pipe.x = pipe.x - pipe.vx;
     if(pipe.x <= 0){
-        pipe.x = canvas.width - pipe.w;
+        pipe.x = cv.canvas.width - pipe.w;
         pipe.h = rdmPipeY();
         pipe.vx += 0.3;
         score++;
@@ -27,8 +22,8 @@ function Update(){
 }
  
 function Draw(){
-    clearScreen(ctx, canvas);
-    drawRect(bird.x, bird.y, bird.w, bird.h, "black", ctx);
+    vframe.gfx.clearScreen(cv.ctx, cv.canvas);
+    vframe.gfx.drawRectO(birdRect, "black", cv.ctx);
     drawPipes();
     drawScore();
 }
@@ -42,12 +37,10 @@ requestAnimationFrame(Game);
 
 //------------------------GLOBAL-----------------------
 let isGameOver = false;
-let isCollided = false;
 let score = 0;
 
 //-----------------------------------------------------
 //------------------------BIRD-------------------------
-
 const bird = {
     x: 92 ,
     y: 100,
@@ -56,11 +49,12 @@ const bird = {
     h: 32,
     flap: false
 }
+const birdRect = new vframe.obj.rectangle(bird.x, bird.y, bird.w, bird.h);
 
 //------------------------PIPE-------------------------
 
 const pipe = {
-    x: canvas.width,
+    x: cv.canvas.width,
     y: 0,
     vx: 3,
     w: 32,
@@ -68,23 +62,23 @@ const pipe = {
     gap: 92,
     out: false
 }
-
+const pipeRect = new vframe.obj.rectangle(pipe.x, pipe.y, pipe.w, pipe.h);
 function rdmPipeY(){
-    return Math.random() * ((canvas.height - pipe.gap) - (0 + pipe.gap) + (0 + pipe.gap));
+    return Math.random() * ((cv.canvas.height - pipe.gap) - (0 + pipe.gap) + (0 + pipe.gap));
 } 
 function drawPipes(){
 
     //top
-    drawRect(pipe.x, pipe.y            , pipe.w, pipe.h, "green", ctx);
+    vframe.gfx.drawRect(pipe.x, pipe.y            , pipe.w, pipe.h, "green", cv.ctx);
 
     //bot
-    drawRect(pipe.x, pipe.h + pipe.gap , pipe.w, canvas.height, "green", ctx);
+    vframe.gfx.drawRect(pipe.x, pipe.h + pipe.gap , pipe.w, cv.canvas.height, "green", cv.ctx);
 
 }
 //-----------------------------------------------------
 //------------------------SCORE------------------------
 function drawScore(){
-    drawText("SCORE: " + score, 10, 10, "black", ctx );
+    vframe.gfx.drawText("SCORE: " + score, 10, 20, 15,"black", cv.ctx );
 }
 
 //-----------------------------------------------------
@@ -100,25 +94,26 @@ document.body.addEventListener("keyup", (e)=>{
 }, false);
 
 function moveBird(){
-    bird.y = bird.y + bird.vy;
+    birdRect.y += bird.vy;
 
     if(bird.flap){
         bird.vy = -1
-        bird.y = bird.y + bird.vy;
+        birdRect.y +=  bird.vy;
     }
     else{
         bird.vy = 1
         bird.y = bird.y + bird.vy;
-       bird.vy += 0.5;
+        bird.vy += 0.5;
     }
 }
 
 function checkCol(){
-    if(bird.y + bird.h >= canvas.height || bird.y <= 0 )   isGameOver = true;
+    if(birdRect.y + birdRect.h >= cv.canvas.height || birdRect.y <= 0 )   isGameOver = true;
 }
 
 function pipeCol(){
-    if(rectCol(bird.x, bird.y, bird.w, bird.h, pipe.x, pipe.y, pipe.w, pipe.h) || rectCol(bird.x, bird.y, bird.w, bird.h, pipe.x, pipe.h + pipe.gap, pipe.w, canvas.height)){
+    if(vframe.col.rectCol(birdRect.x, birdRect.y, birdRect.w, birdRect.h, pipe.x, pipe.y, pipe.w, pipe.h) || vframe.col.rectCol(birdRect.x, birdRect.y, birdRect.w, birdRect.h, pipe.x, pipe.h + pipe.gap, pipe.w, cv.canvas.height)){
         isGameOver = true;
     } 
+ 
 }

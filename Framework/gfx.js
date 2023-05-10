@@ -38,9 +38,14 @@ export function drawDialogue(text, dialogueBox, ctx){
     drawText(text, dialogueBox.x + 5, dialogueBox.y + 20, 18, "white", ctx)
 }
 //-------------------------------DRAW SHAPE-------------------------------------------
-export function drawRect(rect, col,  ctx){
+export function drawRectO(rect, col,  ctx){
     ctx.fillStyle = col;
     ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
+}
+
+export function drawRect(x,y,w,h,col,ctx){
+    ctx.fillStyle = col;
+    ctx.fillRect(x, y, w, h);
 }
 
 export function drawCircle(x, y , r, color, fill, ctx ){
