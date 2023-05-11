@@ -1,4 +1,4 @@
-import * as gfx from "../../Framework/gfx.js"
+import * as gfx from "../../Framework/gfx.js";
 import * as obj from "../../Framework/obj.js";
 
 const cv = gfx.createCanvas(600,400);
@@ -27,7 +27,7 @@ const map = {
     tiles: [
         0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 1, 1, 1, 1, 0, 0,
+        0, 0, 1, 1, 1, 1, 2, 0,
         0, 0, 2, 2, 2, 2, 0, 0,
         0, 0, 3, 3, 3, 3, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0,

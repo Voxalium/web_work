@@ -1,0 +1,14 @@
+#menu{
+    background-color: red;
+    height: 100px;
+}
+
+#midi{
+    background-color: green;
+    height: 400px;
+}
+
+#tracks{
+    background-color: blue;
+    height: 300px;
+}
