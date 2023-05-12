@@ -1,8 +1,19 @@
 #menu{
+    text-align: center;
     background-color: red;
     height: 100px;
 }
+#transport{
+    display: inline;
+}
 
+#tempo{
+    display: inline;
+}
+
+#info{
+    display: inline;
+}
 #midi{
     background-color: green;
     height: 400px;
