@@ -7,6 +7,12 @@
     display: inline;
 }
 
+#globalVolume{
+    -webkit-appearance: slider-vertical;
+    height: 50px;
+    width: 10px;
+}
+
 #tempo{
     display: inline;
 }

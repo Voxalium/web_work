@@ -1,5 +1,6 @@
 const tempoButton = document.getElementById("tempoButton");
-
+const tempoInput = document.createElement("input");
+tempoInput.style.width = "30px";
 let tempo = 135;
 
 tempoButton.textContent = tempo;
@@ -12,15 +13,21 @@ function Stop(){
 
 }
 
-function IncreaseTempo(){
-    return tempo++;
-}
+tempoButton.onmousedown = ()=>{
 
-function DecreaseTempo(){
-    return tempo--;
+    tempoButton.appendChild(tempoInput);
+    tempoInput.onkeydown = (e)=>{
+        if(e.key === "Enter" && tempoInput.value >= 60 && tempoInput.value <= 300){
+            tempo = tempoInput.value;
+            tempoButton.textContent = tempo;
+            tempoInput.remove();
+        }
+    }
 }
-
-tempoButton.addEventListener("click", ()=>{
-    tempo = IncreaseTempo();
     
-});
+
+
+
+    
+
+
