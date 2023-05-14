@@ -1,6 +1,9 @@
 const tempoButton = document.getElementById("tempoButton");
+let value = tempoButton.style.left
+console.log(value); 
 const tempoInput = document.createElement("input");
 tempoInput.style.width = "30px";
+
 let tempo = 135;
 
 tempoButton.textContent = tempo;

@@ -22,10 +22,15 @@
 }
 #midi{
     background-color: green;
-    height: 400px;
+    height: 300px;
 }
 
 #tracks{
     background-color: blue;
-    height: 300px;
+    height: 350px;
+}
+
+.trackButton{
+    display: block;
+    padding-bottom: 50px;
 }
