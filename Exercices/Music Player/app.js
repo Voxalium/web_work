@@ -46,5 +46,24 @@ audioElement.addEventListener( "ended", ()=>{
     playButtonID.dataset.playing = "false";
 }, false);
 
+//knob
+const knob  = document.querySelector("#knob"); 
 
+let knobRotate = 0;
+let mouseDown = false;
+knob.addEventListener("mousedown", ()=>{
+    mouseDown = true;
+    if(mouseDown === true){
+        window.addEventListener("mousemove", (e)=>{
+            let mousePos = { x: e.clientX, y: e.clientY};
+            console.log(mousePos.y);
+          knob.style.transform = "rotate("+ mousePos.y + "deg)";
+    })}
+}
+    
+)
+
+knob.addEventListener("mouseup", ()=>{
+    mouseDown = false;
+})
 
