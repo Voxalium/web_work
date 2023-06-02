@@ -1,18 +1,20 @@
  #mainContainer{
-    width: 50%;
+    padding: 25px;
+    width: 150px;
     background-color: red;
+    border-radius: 10px;
  }
 
 
  /** INPUT **/
- .pan{
+ .custom{
    -webkit-appearance: none;
    appearance: none;
    background: transparent;
    cursor: pointer;
    width: 10rem;
  }
- .pan::-webkit-slider-runnable-track{
+ .custom::-webkit-slider-runnable-track{
    background: #053a5f;
    margin-bottom: 3px;
    
@@ -21,28 +23,32 @@
 
 
  }
- .pan::-webkit-slider-thumb{
+ .custom::-webkit-slider-thumb{
    -webkit-appearance: none;
    appearance: none;
-   margin-top: -8px;
+   margin-top: -2px;
    background: #5cd5eb;
-   height: 24px;
+   height: 12px;
    width: 18px;
    border-radius: 5px;
  }
 
- .pan::-moz-range-track{
+ .custom::-moz-range-track{
    background: #053a5f;
    height: 0.5rem;
    border-radius: 8px;
 
  }
 
- .pan::-moz-range-thumb{
+ .custom::-moz-range-thumb{
    border: none;
    background: #5cd5eb;
    height: 24px;
    width: 18px;
    border-radius: 5px;
 
+ }
+
+ #control{
+  padding-top: 5px;
  }
