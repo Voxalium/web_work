@@ -1,9 +1,9 @@
-export function createCanvas(w, h){    
+export function createCanvas(w, h, c = "grey"){    
     const canvas = document.createElement("canvas");
     document.body.appendChild(canvas);
     document.body.style.textAlign = "center";
 
-    canvas.style.backgroundColor = "grey";
+    canvas.style.backgroundColor = c;
     canvas.width = w;
     canvas.height = h;
 
@@ -43,7 +43,7 @@ export function drawRectO(rect, col,  ctx){
     ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
 }
 
-export function drawRect(x,y,w,h,col,ctx){
+export function drawRect(ctx,x,y,w,h,col="black"){
     ctx.fillStyle = col;
     ctx.fillRect(x, y, w, h);
 }
@@ -94,8 +94,8 @@ export function drawVector2(vector2, color, ctx){
     ctx.stroke();
 }
 
-export function drawText(str, x, y, s, color, ctx){
-    ctx.font = "bold " + s +"px" + " serif";
+export function drawText(ctx, str, x, y, size = "24", color="black"){
+    ctx.font = "bold " + size +"px" + " serif";
     ctx.fillStyle = color;
     ctx.fillText(str,x,y);
     
