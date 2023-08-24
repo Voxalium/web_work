@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+:root {
+  --gray: #333333;
+  --gray2: #222222;
+  --grey3: #121212;
+  --blue: #3ea6ff;
+  --blue2: #263850;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0f0f;
+  margin-left: 16px;
+  margin-right: 24px;
+}
+
+/* --HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-content: center;
+}
+
+.header-left-ButtonHide {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+}
+.header-left-ButtonHide:hover {
+  background-color: var(--gray2);
+  border-radius: 30px;
+}
+
+.header-left-LogoYoutube {
+  width: 128px;
+  padding-left: 16px;
+}
+
+.header-center {
+  width: 40%;
+}
+
+.header-center-SearchBar {
+  width: 80%;
+}
+
+#searchBar {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-family: Roboto;
+  border: 1px solid var(--gray);
+  border-radius: 24px 0px 0px 24px;
+  height: 40px;
+  margin-left: 8px;
+  background-color: var(--grey3);
+  padding-left: 12px;
+  width: 100%;
+  caret-color: white;
+  outline: none;
+  font-size: 16px;
+}
+#searchBar:focus {
+  border: 1px solid #1c62b9;
+}
+
+.header-center-ButtonSearch {
+  width: 24px;
+  height: 40px;
+  padding-left: 38px;
+  padding-right: 16px;
+  background-color: var(--gray2);
+  border-radius: 0px 24px 24px 0px;
+  border: 1px solid var(--gray);
+}
+
+.header-center-ButtonSearch svg {
+  height: 24px;
+  width: 24px;
+}
+
+.header-right-Connection {
+  margin-left: 16px;
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  padding: 5px 10px 6px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  font-family: Roboto;
+  font-size: 15px;
+}
+.header-right-Connection:hover {
+  background-color: var(--blue2);
+}
+.header-right-Connection p {
+  padding-left: 6px;
+}
