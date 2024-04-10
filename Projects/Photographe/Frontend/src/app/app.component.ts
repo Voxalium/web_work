@@ -1,14 +1,10 @@
 import { Component } from "@angular/core";
-import { HeaderComponent } from "./header/header.component";
-import { FooterComponent } from "./footer/footer.component";
+import { HomeComponent } from "./views/home/home.view";
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [HeaderComponent, FooterComponent],
-  template: ` <main>
-    <app-header></app-header>
-    <app-footer></app-footer>
-  </main>`,
+  imports: [HomeComponent],
+  template: `<app-home></app-home>`,
   styles: [],
 })
 export class AppComponent {}

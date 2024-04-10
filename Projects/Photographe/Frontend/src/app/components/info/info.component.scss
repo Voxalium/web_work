@@ -1,0 +1,12 @@
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+}
