@@ -1,20 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --primary: #885454;
+  --primary: #888888;
 }
 
 * {
+  font-family: "Noto Sans";
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .view {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: space-between;
+}
+
+.home {
+  margin: 22px;
+  .info,
+  .gallery {
+    padding: 12px 22px;
+  }
 }

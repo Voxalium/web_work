@@ -1,0 +1,8 @@
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: auto;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}

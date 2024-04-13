@@ -1,5 +1,9 @@
-footer{
-  height: 120px;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
   background: #000;
   color: #fff;
 }
