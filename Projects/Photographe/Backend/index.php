@@ -5,16 +5,19 @@ $uri = $_SERVER["REQUEST_URI"];
 
 switch($uri) {
     case "/":
-        echo "Hello from /";
+        echo "Hello from / \n";
         break;
     case "/api/login":
         echo "Hello from /api/login";
         break;
     case "/api/datas":
+        header("Content-Type: application/json");
         $data = getData();
+        $jsonData = [];
         foreach($data as $d) {
-            var_dump($d);
+            $jsonData[] = $d;
         }
+        echo  json_encode($jsonData);
         break;
     default:
         echo "404";
