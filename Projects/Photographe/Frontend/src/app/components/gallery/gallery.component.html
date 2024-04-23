@@ -1,5 +1,9 @@
 <div class="gallery">
   <h2>Mes travaux</h2>
   <app-filter></app-filter>
-  <app-gallery-grid></app-gallery-grid>
+  <div class="gallery-grid">
+    <div class="gallery-element" *ngFor="let item of data">
+      <app-gallery-element [title]="item.title"></app-gallery-element>
+    </div>
+  </div>
 </div>

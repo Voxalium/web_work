@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { InfoComponent } from "../../components/info/info.component";
 import { GalleryComponent } from "../../components/gallery/gallery.component";
 @Component({
@@ -8,4 +8,6 @@ import { GalleryComponent } from "../../components/gallery/gallery.component";
   templateUrl: `./home.view.html`,
   styleUrl: `./home.view.scss`,
 })
-export class HomeComponent {}
+export class HomeComponent {
+  @Input() data: any;
+}
