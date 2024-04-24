@@ -1,36 +1,24 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { HeaderComponent } from "./components/header/header.component";
-import { HomeComponent } from "./views/home/home.view";
-import { FooterComponent } from "./components/footer/footer.component";
-import { NgIf } from "@angular/common";
+import { HttpClient } from "@angular/common/http";
+import { DataService } from "./data.service";
 
 @Component({
   selector: "app-root",
-  standalone: true,
-  imports: [
-    HeaderComponent,
-    HomeComponent,
-    FooterComponent,
-    HttpClientModule,
-    NgIf,
-  ],
-  template: ` <div class="view">
-    <app-header></app-header>
-    <app-home *ngIf="responseData" [data]="responseData"></app-home>
-    <app-footer></app-footer>
-  </div>`,
+  templateUrl: "./app.component.html",
   styles: [],
 })
 export class AppComponent implements OnInit {
   responseData: any;
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private dataService: DataService,
+  ) {}
 
   ngOnInit(): void {
     this.http.get("http://localhost:8000/api/datas").subscribe(
       (data: any) => {
-        console.log("Data from server:", data);
         this.responseData = data;
+        this.dataService.setData(data);
       },
       (error) => {
         console.error("Error fetching data:", error);
