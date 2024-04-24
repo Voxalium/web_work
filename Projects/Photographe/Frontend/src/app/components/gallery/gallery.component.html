@@ -3,7 +3,10 @@
   <app-filter></app-filter>
   <div class="gallery-grid">
     <div class="gallery-element" *ngFor="let item of data">
-      <app-gallery-element [title]="item.title"></app-gallery-element>
+      <app-gallery-element
+        [title]="item.title"
+        [img]="item.img"
+      ></app-gallery-element>
     </div>
   </div>
 </div>
