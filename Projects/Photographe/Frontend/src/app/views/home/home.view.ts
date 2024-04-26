@@ -1,12 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { InfoComponent } from "../../components/info/info.component";
 import { GalleryComponent } from "../../components/gallery/gallery.component";
+import { GalleryModal } from "../../components/gallery/gallery-modal";
 import { DataService } from "../../data.service";
 import { Subscription } from "rxjs";
 @Component({
   selector: "app-home",
   standalone: true,
-  imports: [InfoComponent, GalleryComponent],
+  imports: [InfoComponent, GalleryComponent, GalleryModal],
   templateUrl: `./home.view.html`,
   styleUrl: `./home.view.scss`,
 })
