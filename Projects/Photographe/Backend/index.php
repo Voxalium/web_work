@@ -3,7 +3,6 @@
 require "./Controllers/data.php";
 $uri = $_SERVER["REQUEST_URI"];
 
-
 function getImage($imageName)
 {
     $imagePath = "./Img/" . $imageName;
@@ -20,21 +19,38 @@ function getImage($imageName)
 
 function handleAPIRequest($uri)
 {
+    $method = $_SERVER['REQUEST_METHOD'];
+
     switch($uri) {
         case "/":
             echo "Hello from / \n";
             break;
         case "/api/login":
+            //TODO HANDLE POST REQUEST
             echo "Hello from /api/login";
             break;
         case "/api/datas":
-            header("Content-Type: application/json");
-            $data = getData();
-            $jsonData = [];
-            foreach($data as $d) {
-                $jsonData[] = $d;
+            switch($method) {
+                case "GET":
+                    http_response_code(200);
+                    header("Content-Type: application/json");
+                    $data = getData();
+                    $jsonData = [];
+                    foreach($data as $d) {
+                        $jsonData[] = $d;
+                    }
+                    echo  json_encode($jsonData);
+                    break;
+                case "POST":
+                    //TODO HANDLE POST REQUEST
+                    break;
+                case "UPDATE":
+                    //TODO HANDLE UPDATE REQUEST
+                    break;
+                case "DELETE":
+                    //TODO HANDLE DELETE REQUEST
+                    break;
             }
-            echo  json_encode($jsonData);
             break;
         default:
             header("HTTP/1.0 404 Not Found");
