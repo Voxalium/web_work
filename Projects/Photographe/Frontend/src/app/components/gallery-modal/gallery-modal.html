@@ -1,0 +1,15 @@
+<div class="gallery-modal" [style.display]="showModal ? 'block' : 'none'">
+  <div class="background">
+    <div class="content">
+      <h3>Title</h3>
+      <img src="" alt="" />
+      <p class="description">Desc</p>
+      <img
+        (click)="toggleModal()"
+        src="../../../assets/quit.webp"
+        alt="quit button"
+        class="quit"
+      />
+    </div>
+  </div>
+</div>

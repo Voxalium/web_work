@@ -2,10 +2,10 @@ import { Component } from "@angular/core";
 import { ButtonComponent } from "../button/button.component";
 
 @Component({
-  selector: "app-gallery-modal",
+  selector: "app-add-modal",
   imports: [ButtonComponent],
   standalone: true,
-  templateUrl: `./gallery-modal.html`,
-  styleUrl: `./gallery-modal.scss`,
+  templateUrl: `./add-modal.html`,
+  styleUrl: `./add-modal.scss`,
 })
-export class GalleryModal {}
+export class AddModal {}
