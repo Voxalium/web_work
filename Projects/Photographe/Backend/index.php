@@ -1,8 +1,11 @@
 <?php
 
 require "./Controllers/data.php";
+require "./Controllers/login.php";
+
 $uri = $_SERVER["REQUEST_URI"];
 
+$mongo = new MongoDB\Client("mongodb://localhost:27017");
 function getImage($imageName)
 {
     $imagePath = "./Img/" . $imageName;
@@ -17,7 +20,7 @@ function getImage($imageName)
 
 }
 
-function handleAPIRequest($uri)
+function handleAPIRequest($uri, $mongoClient)
 {
     $method = $_SERVER['REQUEST_METHOD'];
 
@@ -26,41 +29,75 @@ function handleAPIRequest($uri)
             echo "Hello from / \n";
             break;
         case "/api/login":
-            //TODO HANDLE POST REQUEST
-            echo "Hello from /api/login";
+            if($method == "POST") {
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+                $loginResult = handleLogin($username, $password);
+
+                if($loginResult) {
+                    http_response_code(200);
+                    echo "Login Success\n";
+                } else {
+                    http_response_code(401);
+                    echo "Login Fail\n";
+                }
+            }
             break;
         case "/api/datas":
             switch($method) {
                 case "GET":
-                    http_response_code(200);
-                    header("Content-Type: application/json");
-                    $data = getData();
-                    $jsonData = [];
-                    foreach($data as $d) {
-                        $jsonData[] = $d;
+                    $data = getData($mongoClient);
+                    if($data) {
+                        header("Content-Type: application/json");
+                        http_response_code(200);
+                        $jsonData = [];
+                        foreach($data as $d) {
+                            $jsonData[] = $d;
+                        }
+                    } else {
+                        header("HTTP/1.0 404 Not Found");
+                        echo "Data not found";
                     }
                     echo  json_encode($jsonData);
                     break;
                 case "POST":
-                    //TODO HANDLE POST REQUEST
-                    break;
-                case "UPDATE":
-                    //TODO HANDLE UPDATE REQUEST
-                    break;
-                case "DELETE":
-                    //TODO HANDLE DELETE REQUEST
+                    //TODO REQUIRED FIELDS
+                    $title = $_POST["title"];
+                    $description = $_POST["description"];
+                    $tag = $_POST["tag"];
+                    $img = $_POST["img"];
+
+                    $data = [
+                        "title" => $title,
+                        "description" => $description,
+                        "tag" => $tag,
+                        "img" => $img
+                    ];
+
+                    postData($mongoClient, $data);
+
                     break;
             }
             break;
+        case "/api/delete":
+            switch ($method) {
+                case "POST":
+                    $id = $_POST["id"];
+                    deleteData($mongoClient, $id);
+            }
+            break;
+
         default:
-            header("HTTP/1.0 404 Not Found");
-            echo "404 Page Not Found";
+            http_response_code(404);
+            echo "Page not found";
+
     }
+
 }
 
 if(strpos($uri, "/img/") === 0) {
     $imageName = basename($uri);
     getImage($imageName);
 } else {
-    handleAPIRequest($uri);
+    handleAPIRequest($uri, $mongo);
 }
