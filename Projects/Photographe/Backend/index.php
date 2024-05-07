@@ -43,54 +43,36 @@ function handleAPIRequest($uri, $mongoClient)
                 }
             }
             break;
+
         case "/api/datas":
             switch($method) {
                 case "GET":
-                    $data = getData($mongoClient);
-                    if($data) {
-                        header("Content-Type: application/json");
-                        http_response_code(200);
-                        $jsonData = [];
-                        foreach($data as $d) {
-                            $jsonData[] = $d;
-                        }
-                    } else {
-                        header("HTTP/1.0 404 Not Found");
-                        echo "Data not found";
-                    }
-                    echo  json_encode($jsonData);
+                    echo getData($mongoClient);
                     break;
                 case "POST":
                     //TODO REQUIRED FIELDS
-                    $title = $_POST["title"];
-                    $description = $_POST["description"];
-                    $tag = $_POST["tag"];
-                    $img = $_POST["img"];
-
-                    $data = [
-                        "title" => $title,
-                        "description" => $description,
-                        "tag" => $tag,
-                        "img" => $img
-                    ];
-
-                    postData($mongoClient, $data);
-
+                    $data = json_decode(file_get_contents("php://input"));
+                    $converted = converter($data);
+                    postData($mongoClient, $converted);
                     break;
-            }
-            break;
-        case "/api/delete":
-            switch ($method) {
-                case "POST":
-                    $id = $_POST["id"];
+                case "DELETE":
+                    $data = json_decode(file_get_contents("php://input"), true);
+                    $id = $data["id"];
                     deleteData($mongoClient, $id);
+                    break;
+
+                case "PATCH":
+                    $data = json_decode(file_get_contents("php://input"));
+                    $id = $data->id;
+                    $converted = converter($data);
+                    updateData($mongoClient, $id, $converted);
+                    break;
             }
             break;
 
         default:
             http_response_code(404);
             echo "Page not found";
-
     }
 
 }
