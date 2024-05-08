@@ -1,5 +1,6 @@
 <div class="gallery">
   <h2>Mes travaux</h2>
+  <app-button name="Ajouter" (click)="modal.toggle()"></app-button>
   <app-filter></app-filter>
   <div class="gallery-grid">
     <div class="gallery-element" *ngFor="let item of data">
@@ -9,4 +10,5 @@
       ></app-gallery-element>
     </div>
   </div>
+  <app-add-modal #modal> </app-add-modal>
 </div>

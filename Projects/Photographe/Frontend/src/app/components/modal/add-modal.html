@@ -1,17 +1,27 @@
-<div class="add-modal">
+<div class="add-modal" [style.display]="isOpen ? 'block' : 'none'">
   <div class="background">
     <div class="modal-content">
       <h3>Ajouter des photos</h3>
-      <form action="">
+      <form>
         <label for="title">Titre</label>
         <input type="text" id="title" />
         <label for="description">Description</label>
         <textarea rows="10" cols=""></textarea>
         <select name="Tag" id="tag">
-          Tag
+          <option value="portraits">Portraits</option>
+          <option value="paysages">Paysages</option>
+          <option value="interieurs">Intérieurs</option>
+          <option value="entreprises">Entreprises</option>
         </select>
-        <app-button id="mod-button" name="Valider"></app-button>
+        <app-button type="submit" id="mod-button" name="Valider"></app-button>
       </form>
+
+      <img
+        (click)="toggle()"
+        src="../../../assets/quit.webp"
+        alt="quit button"
+        class="quit"
+      />
     </div>
   </div>
 </div>

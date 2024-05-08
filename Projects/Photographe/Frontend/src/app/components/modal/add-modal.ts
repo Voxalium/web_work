@@ -8,4 +8,10 @@ import { ButtonComponent } from "../button/button.component";
   templateUrl: `./add-modal.html`,
   styleUrl: `./add-modal.scss`,
 })
-export class AddModal {}
+export class AddModal {
+  isOpen: boolean = false;
+
+  public toggle(): void {
+    this.isOpen = !this.isOpen;
+  }
+}
