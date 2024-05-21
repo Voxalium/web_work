@@ -1,0 +1,39 @@
+:root {
+  font-family: "Roboto";
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
+}
+.fullcenter {
+  align-items: center;
+  justify-content: center;
+}
+.textcenter {
+  text-align: center;
+}
+
+.mt1 {
+  margin-top: 1rem;
+}
+
+@import "../components/App/App.scss";
+@import "../pages/Home/Home.scss";
