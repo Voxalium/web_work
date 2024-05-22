@@ -1,6 +1,7 @@
 :root {
   font-family: "Roboto";
   color: white;
+  --bgColor: #222222;
 }
 
 * {
@@ -14,13 +15,12 @@ body,
   height: 100%;
 }
 
-.flex {
-  display: flex;
-}
 .col {
+  display: flex;
   flex-direction: column;
 }
 .row {
+  display: flex;
   flex-direction: row;
 }
 .fullcenter {
@@ -30,9 +30,47 @@ body,
 .textcenter {
   text-align: center;
 }
-
 .mt1 {
   margin-top: 1rem;
+}
+.bt {
+  border-top: solid 1px #fff;
+}
+.bg {
+  background-color: var(--bgColor);
+}
+.pd15 {
+  padding: 15px;
+}
+.br12 {
+  border-radius: 12px;
+}
+
+//ANIMATION
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @import "../components/App/App.scss";
