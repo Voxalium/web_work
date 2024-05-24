@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import HomeCard from "../../components/HomeCard/HomeCard";
 import mouseAim from "../../scripts/mouseAim";
 
 function Home() {
@@ -7,16 +8,13 @@ function Home() {
   });
   return (
     <div className="Home row fullcenter ">
-      <div className="outer br12 col fullcenter">
-        <div className="inner bg br12 pd15 col fullcenter">
-          <h1>Bonjour!</h1>
-          <div className="text textcenter mt1">
-            Je suis Terence Truyens,
-            <br /> j'utilise aussi le pseudo Voxalium.
-            <br /> Je suis spécialisé dans le développement web frontend.
-          </div>
-        </div>
-      </div>
+      <HomeCard
+        title="Bonjour"
+        text={[
+          "Je suis Terence Truyens,",
+          "je suis spécialisé dans le développement Web",
+        ]}
+      ></HomeCard>
     </div>
   );
 }

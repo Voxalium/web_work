@@ -3,6 +3,7 @@
   color: white;
   line-height: 1.5rem;
   --bgColor: #222222;
+  --bgColorLight: #282828;
 }
 
 * {
@@ -15,14 +16,30 @@ body,
 #root {
   height: 100%;
 }
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.5s ease-in,
+    opacity 0.5s ease-in;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
 
 .col {
   display: flex;
   flex-direction: column;
 }
 .row {
+  animation: 0.5s ease-in fade-in;
   display: flex;
   flex-direction: row;
+}
+.gap5 {
+  gap: 5px;
 }
 .fullcenter {
   align-items: center;
@@ -39,6 +56,9 @@ body,
 }
 .bg {
   background-color: var(--bgColor);
+}
+.bg-light {
+  background-color: var(--bgColorLight);
 }
 .pd15 {
   padding: 15px;
@@ -76,3 +96,6 @@ body,
 
 @import "../components/App/App.scss";
 @import "../pages/Home/Home.scss";
+
+@import "../components/HomeCard/HomeCard.scss";
+@import "../components/Button/Button.scss";

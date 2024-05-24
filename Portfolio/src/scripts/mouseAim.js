@@ -1,9 +1,7 @@
 function mouseAim(containerTag, innerTag) {
   const container = document.querySelector(containerTag);
   const inner = document.querySelector(innerTag);
-  const constrain = 300;
-  console.log(container);
-  console.log(inner);
+  const constrain = 500;
 
   function transform(x, y, e) {
     let box = e.getBoundingClientRect();

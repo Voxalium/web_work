@@ -1,0 +1,10 @@
+.buttons {
+  position: absolute;
+  transform: translateX(50%);
+  .button {
+    cursor: pointer;
+    border: none;
+    background-color: #888888;
+    color: red;
+  }
+}
