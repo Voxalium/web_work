@@ -1,10 +1,12 @@
-.buttons {
-  position: absolute;
-  transform: translateX(50%);
+.container {
   .button {
+    border-radius: 50%;
     cursor: pointer;
     border: none;
-    background-color: #888888;
+    background-color: var(--btnColor);
     color: red;
+    &:hover {
+      background-color: var(--btnColorLight);
+    }
   }
 }

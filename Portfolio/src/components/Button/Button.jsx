@@ -1,5 +1,10 @@
 function Button({ text }) {
-  return <button className="button pd15">{text}</button>;
+  return (
+    <div className="container col fullcenter">
+      <button className="button pd15"></button>
+      <p className="mt1">{text}</p>
+    </div>
+  );
 }
 
 export default Button;

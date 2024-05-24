@@ -4,6 +4,8 @@
   line-height: 1.5rem;
   --bgColor: #222222;
   --bgColorLight: #282828;
+  --btnColor: #898989;
+  --btnColorLight: #999999;
 }
 
 * {
@@ -15,6 +17,10 @@ html,
 body,
 #root {
   height: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 .hidden {
   visibility: hidden;
@@ -34,12 +40,11 @@ body,
   flex-direction: column;
 }
 .row {
-  animation: 0.5s ease-in fade-in;
   display: flex;
   flex-direction: row;
 }
-.gap5 {
-  gap: 5px;
+.gap15 {
+  gap: 15px;
 }
 .fullcenter {
   align-items: center;

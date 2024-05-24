@@ -25,7 +25,7 @@ function HomeCard({ title, text }) {
         </div>
       </div>
       <div
-        className={`buttons mt1 gap5 row fullcenter ${
+        className={`buttons mt1 gap15 row fullcenter  ${
           isOpen ? "visible" : "hidden "
         }`}
       >
