@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
 
-function HomeCard({ title, text }) {
+export default function HomeCard({ title, text }) {
   const textArray = text?.map((t, index) => (
     <p key={`text-${index}`} className="text textcenter ">
       {t}
@@ -29,14 +30,13 @@ function HomeCard({ title, text }) {
           isOpen ? "visible" : "hidden "
         }`}
       >
-        <Button text="Mes Projets" />
+        <NavLink to="/projects">
+          <Button text="Mes Projets" />
+        </NavLink>
         <a href="/documents/CV_Terence_Truyens.pdf" target="_blank">
-          {" "}
           <Button text="Mon CV" />
         </a>
       </div>
     </div>
   );
 }
-
-export default HomeCard;

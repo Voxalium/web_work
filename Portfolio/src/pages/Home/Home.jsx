@@ -1,13 +1,18 @@
 import { useEffect } from "react";
 import HomeCard from "../../components/HomeCard/HomeCard";
 import mouseAim from "../../scripts/mouseAim";
+import { motion } from "framer-motion";
 
 function Home() {
   useEffect(() => {
     mouseAim(".Home", ".outer");
   });
   return (
-    <div className="Home row fullcenter ">
+    <motion.main
+      className="Home row fullcenter "
+      initial={{ y: "100%" }}
+      animate={{ y: "0" }}
+    >
       <HomeCard
         title="Bonjour"
         text={[
@@ -15,7 +20,7 @@ function Home() {
           "je suis spécialisé dans le développement Web",
         ]}
       ></HomeCard>
-    </div>
+    </motion.main>
   );
 }
 

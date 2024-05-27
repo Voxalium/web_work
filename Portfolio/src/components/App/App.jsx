@@ -1,10 +1,14 @@
-import Home from "../../pages/Home/Home";
-function App() {
+import { AnimatedRoutes } from "../AnimatedRoutes/AnimatedRoutes";
+import NavBar from "../NavBar/NavBar";
+import { BrowserRouter } from "react-router-dom";
+
+export default function App() {
   return (
     <div className="App">
-      <Home />
+      <BrowserRouter>
+        <NavBar />
+        <AnimatedRoutes />
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;

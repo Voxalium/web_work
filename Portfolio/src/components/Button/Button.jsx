@@ -1,4 +1,4 @@
-function Button({ text }) {
+export default function Button({ text }) {
   return (
     <div className="container col fullcenter">
       <button className="button pd15"></button>
@@ -6,5 +6,3 @@ function Button({ text }) {
     </div>
   );
 }
-
-export default Button;
