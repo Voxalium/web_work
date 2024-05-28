@@ -1,6 +1,7 @@
 :root {
   font-family: "Roboto";
   color: white;
+  scroll-behavior: smooth;
   line-height: 1.5rem;
   --bgColor: #222222;
   --bgColorLight: #282828;
@@ -47,18 +48,32 @@ a {
   flex-direction: row;
 }
 .gap15 {
-  gap: 15px;
+  gap: 1.5rem;
 }
 .fullcenter {
   align-items: center;
   justify-content: center;
 }
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
 .textcenter {
   text-align: center;
+}
+
+.mt08 {
+  margin-top: 0.8rem;
 }
 .mt1 {
   margin-top: 1rem;
 }
+.mg1 {
+  margin: 1rem;
+}
+
 .bt {
   border-top: solid 1px #fff;
 }
@@ -108,3 +123,4 @@ a {
 @import "../components/HomeCard/HomeCard.scss";
 @import "../components/Button/Button.scss";
 @import "../components/NavBar/NavBar.scss";
+@import "../components//ProjectCard/ProjectCard.scss";

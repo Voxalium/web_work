@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import HomeCard from "../../components/HomeCard/HomeCard";
 import mouseAim from "../../scripts/mouseAim";
+import { transition } from "../../scripts/transition";
 import { motion } from "framer-motion";
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
       className="Home row fullcenter "
       initial={{ y: "100%" }}
       animate={{ y: "0" }}
+      transition={transition}
     >
       <HomeCard
         title="Bonjour"
