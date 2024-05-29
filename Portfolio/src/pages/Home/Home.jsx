@@ -18,10 +18,11 @@ function Home() {
       <HomeCard
         title="Bonjour"
         text={[
-          "Je suis Terence Truyens,",
-          "je suis spécialisé dans le développement Web",
+          "Je suis spécialisé dans le développement web front-end (HTML, CSS, React).",
+          "En 2023, j'ai suivi la formation Intégrateur web sur OpenClassrooms, ce qui m'a permis d'approfondir mes connaissances en développement Web.",
+          "Durant cette formation, j'ai aussi appris à organiser un projet avec les méthodes AGILE, à debugger des sites et faire des tests unitaires et fonctionnels avec JEST.",
         ]}
-      ></HomeCard>
+      />
     </motion.main>
   );
 }

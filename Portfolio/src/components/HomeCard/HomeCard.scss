@@ -1,25 +1,30 @@
-.outer {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  .inner {
+.card {
+  width: 100%;
+  max-width: 600px;
+  .outer {
     position: relative;
-    z-index: 1;
-    margin: 2px;
-  }
-  &::before {
-    content: "";
-    display: block;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(102, 102, 102, 0.75) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    position: absolute;
-    height: 600px;
-    width: 400px;
-    animation: ease-in-out 10s infinite rotation;
-    z-index: 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    .inner {
+      position: relative;
+      z-index: 1;
+      margin: 2px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(102, 102, 102, 0.75) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      position: absolute;
+      height: 350%;
+      width: 600px;
+      animation: ease-in-out 10s infinite rotation;
+      z-index: 0;
+    }
   }
 }

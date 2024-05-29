@@ -2,7 +2,10 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 import { motion } from "framer-motion";
 import { transition } from "../../scripts/transition";
+import data from "../../datas/projects.json";
+const { projects } = data;
 
+console.log(projects);
 export default function Projects() {
   return (
     <motion.main
@@ -14,9 +17,15 @@ export default function Projects() {
       <div className="container col align-center mg1">
         <h2>Mes projets</h2>
         <div className="col cards gap15 mt1">
-          <ProjectCard id="card1" title="Javascript et Sass" />
-          <ProjectCard id="card2" title="React et Redux" />
-          <ProjectCard id="card3" title="Angular, TypeScript et PHP" />
+          {projects.map((p, idx) => (
+            <ProjectCard
+              key={idx}
+              title={p.title}
+              description={p.description}
+              img={p.img}
+              link={p.link}
+            />
+          ))}
         </div>
       </div>
     </motion.main>
