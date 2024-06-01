@@ -17,12 +17,16 @@
 
 html,
 body,
+main,
 #root {
   height: 100%;
 }
 a {
   text-decoration: none;
   color: inherit;
+}
+.fullheight {
+  height: 100%;
 }
 .hidden {
   visibility: hidden;
@@ -47,6 +51,10 @@ a {
   display: flex;
   flex-direction: row;
 }
+
+.gap05 {
+  gap: 0.5rem;
+}
 .gap15 {
   gap: 1.5rem;
 }
@@ -60,6 +68,9 @@ a {
 .justify-center {
   justify-content: center;
 }
+.justify-between {
+  justify-content: space-between;
+}
 .textcenter {
   text-align: center;
 }
@@ -70,13 +81,15 @@ a {
 .mt1 {
   margin-top: 1rem;
 }
+.mb1 {
+  margin-bottom: 1rem;
+}
 .mt3 {
   margin-top: 3rem;
 }
 .mg1 {
   margin: 1rem;
 }
-
 .bt {
   border-top: solid 1px #fff;
 }
@@ -85,6 +98,9 @@ a {
 }
 .bg-light {
   background-color: var(--bgColorLight);
+}
+.pd05 {
+  padding: 0.5rem;
 }
 .pd15 {
   padding: 15px;
@@ -101,6 +117,9 @@ a {
   to {
     opacity: 100%;
   }
+}
+.animationFadeIn {
+  animation: ease-in 1s fade-in;
 }
 
 @keyframes fade-out {
@@ -120,10 +139,12 @@ a {
   }
 }
 
-@import "../components/App/App.scss";
 @import "../pages/Home/Home.scss";
 @import "../pages/Projects/Projects.scss";
+@import "../pages/NotFound/NotFound.scss";
+@import "../pages/Contact/Contact.scss";
+@import "../components/App/App.scss";
 @import "../components/HomeCard/HomeCard.scss";
 @import "../components/Button/Button.scss";
 @import "../components/NavBar/NavBar.scss";
-@import "../components//ProjectCard/ProjectCard.scss";
+@import "../components/ProjectCard/ProjectCard.scss";

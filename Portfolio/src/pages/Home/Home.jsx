@@ -10,7 +10,7 @@ function Home() {
   });
   return (
     <motion.main
-      className="Home row fullcenter "
+      className="Home row fullcenter animationFadeIn "
       initial={{ y: "100%" }}
       animate={{ y: "0" }}
       transition={transition}

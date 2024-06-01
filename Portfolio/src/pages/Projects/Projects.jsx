@@ -9,12 +9,12 @@ console.log(projects);
 export default function Projects() {
   return (
     <motion.main
-      className="Projects col"
+      className="Projects col align-center animationFadeIn"
       initial={{ y: "100%" }}
       animate={{ y: "0" }}
       transition={transition}
     >
-      <div className="container col align-center mg1">
+      <div className="container col align-center mg1 ">
         <h2>Mes projets</h2>
         <div className="col cards gap15 mt1">
           {projects.map((p, idx) => (
@@ -24,6 +24,7 @@ export default function Projects() {
               description={p.description}
               img={p.img}
               link={p.link}
+              tag={p.skills}
             />
           ))}
         </div>

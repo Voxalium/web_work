@@ -33,6 +33,9 @@ export default function HomeCard({ title, text }) {
         <NavLink to="/projects">
           <Button text="Mes Projets" />
         </NavLink>
+        <NavLink to="/contact">
+          <Button text="Contactez moi" />
+        </NavLink>
         <a href="/documents/CV_Terence_Truyens.pdf" target="_blank">
           <Button text="Mon CV" />
         </a>
