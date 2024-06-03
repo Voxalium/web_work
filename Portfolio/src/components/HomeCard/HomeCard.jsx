@@ -2,6 +2,10 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
 
+const email = "/img/envelope-regular.webp";
+const project = "/img/wrench-solid.webp";
+const cv = "/img/file-regular.webp";
+
 export default function HomeCard({ title, text }) {
   const textArray = text?.map((t, index) => (
     <p key={`text-${index}`} className="text textcenter ">
@@ -26,18 +30,18 @@ export default function HomeCard({ title, text }) {
         </div>
       </div>
       <div
-        className={`buttons mt1 gap15 row fullcenter  ${
+        className={`buttons mt1 gap25 row fullcenter  ${
           isOpen ? "visible" : "hidden "
         }`}
       >
         <NavLink to="/projects">
-          <Button text="Mes Projets" />
+          <Button text="Mes Projets" img={project} />
         </NavLink>
-        <NavLink to="/contact">
-          <Button text="Contactez moi" />
+        <NavLink className="translate" to="/contact">
+          <Button text="Contactez moi" img={email} />
         </NavLink>
         <a href="/documents/CV_Terence_Truyens.pdf" target="_blank">
-          <Button text="Mon CV" />
+          <Button text="Mon CV" img={cv} />
         </a>
       </div>
     </div>

@@ -15,7 +15,7 @@ export default function Projects() {
       transition={transition}
     >
       <div className="container col align-center mg1 ">
-        <h2>Mes projets</h2>
+        <h2 className="mt3">Mes projets</h2>
         <div className="col cards gap15 mt1">
           {projects.map((p, idx) => (
             <ProjectCard

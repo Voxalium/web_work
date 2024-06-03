@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 export default function NavBar() {
   return (
     <nav className="NavBar absolute">
-      <ul className="row gap15">
+      <ul className="row gap15 pdl1">
         <li>
           <NavLink to="/">Home</NavLink>
         </li>

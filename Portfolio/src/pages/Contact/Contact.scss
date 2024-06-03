@@ -1,7 +1,12 @@
 .Contact {
   ul {
+    background-color: var(--bgColorLight);
+
     li {
       list-style: none;
+      img {
+        height: 36px;
+      }
     }
   }
 }

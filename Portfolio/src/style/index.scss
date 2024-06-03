@@ -25,6 +25,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.translate {
+  transform: translateY(50px);
+}
 .fullheight {
   height: 100%;
 }
@@ -51,12 +54,14 @@ a {
   display: flex;
   flex-direction: row;
 }
-
 .gap05 {
   gap: 0.5rem;
 }
 .gap15 {
   gap: 1.5rem;
+}
+.gap25 {
+  gap: 2.5rem;
 }
 .fullcenter {
   align-items: center;
@@ -74,7 +79,6 @@ a {
 .textcenter {
   text-align: center;
 }
-
 .mt08 {
   margin-top: 0.8rem;
 }
@@ -103,10 +107,20 @@ a {
   padding: 0.5rem;
 }
 .pd15 {
-  padding: 15px;
+  padding: 1.5rem;
+}
+.pdl1 {
+  padding-left: 1rem;
 }
 .br12 {
-  border-radius: 12px;
+  border-radius: 1.2rem;
+}
+.hoverScale {
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
 }
 
 //ANIMATION
