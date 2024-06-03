@@ -11,8 +11,10 @@ export default function ProjectCard({ title, description, img, tag, link }) {
           </a>
         ) : null}
         <div className="row tags gap05">
-          {tag.map((t) => (
-            <span className="tag pd05">{t}</span>
+          {tag.map((t, idx) => (
+            <span key={idx} className="tag pd05">
+              {t}
+            </span>
           ))}
         </div>
       </div>

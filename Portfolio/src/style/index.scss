@@ -9,10 +9,14 @@
   --btnColor: #898989;
   --btnColorLight: #999999;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
 }
 
 html,
@@ -20,6 +24,9 @@ body,
 main,
 #root {
   height: 100%;
+}
+.App {
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -162,3 +169,4 @@ a {
 @import "../components/Button/Button.scss";
 @import "../components/NavBar/NavBar.scss";
 @import "../components/ProjectCard/ProjectCard.scss";
+@import "../components/ScrollBar/ScrollBar.scss";

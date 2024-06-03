@@ -15,7 +15,6 @@ export default function HomeCard({ title, text }) {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(isOpen);
   return (
     <div className="card">
       <div className="outer br12 col fullcenter ">
