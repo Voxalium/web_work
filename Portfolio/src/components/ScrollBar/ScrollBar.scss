@@ -1,8 +1,9 @@
 .ScrollBar {
-  z-index: 100;
+  z-index: 101;
   position: fixed;
   width: 0%;
-  height: 3px;
+  height: 6px;
+  border-radius: 0 2px 0 0;
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,

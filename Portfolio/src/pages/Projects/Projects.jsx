@@ -15,7 +15,7 @@ export default function Projects() {
         animate={{ y: "0" }}
         transition={transition}
       >
-        <div className="container col align-center mg1 ">
+        <div className="container col align-center pdt25 pdb15 ">
           <h2>Mes projets</h2>
           <div className="col cards gap15 mt1">
             {projects.map((p, idx) => (
