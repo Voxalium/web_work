@@ -5,9 +5,10 @@
   border-bottom: solid 2px rgba(white, $alpha: 0.1);
   box-shadow: inset rgba(black, $alpha: 0.3) 0 0 1em;
 
+  background-color: var(--bgColorLightOp);
+  backdrop-filter: blur(10px);
   img {
     background-color: white;
-    z-index: -1;
   }
   .text {
     width: 100%;

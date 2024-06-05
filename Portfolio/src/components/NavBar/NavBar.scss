@@ -1,12 +1,23 @@
 .NavBar {
   position: fixed;
-  background-color: #fff;
-  color: #000;
-  z-index: 100;
+  background-color: var(--bgColorLightOp);
+  color: #fff;
+
   width: 100%;
-  ul {
-    li {
-      list-style: none;
-    }
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-radius: 0 0 12px 12px;
+  p {
+    padding: 2px;
   }
+  .NavLink:hover {
+    background-color: var(--bgColor2);
+    color: black;
+  }
+}
+.active {
+  transition: 100ms linear;
+  background-color: var(--bgColor2);
+  color: black;
+  box-shadow: inset #00000080 0 0 0.5em;
 }
