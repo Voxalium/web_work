@@ -1,0 +1,25 @@
+.Collapse {
+  h3 {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.open {
+  max-height: 100%;
+  transition: max-height 800ms ease;
+
+  .cards {
+    animation: fade-in 500ms ease-in;
+  }
+}
+.close {
+  max-height: 40px;
+  transition: max-height 500ms ease;
+
+  overflow: hidden;
+  .cards {
+    animation: fade-out 500ms ease-in;
+  }
+}

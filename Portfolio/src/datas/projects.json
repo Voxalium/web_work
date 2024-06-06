@@ -1,16 +1,6 @@
 {
     "projects": [
         {
-            "title": "Agence de voyage Booki",
-            "description": "Le projet Booki consistait à intégrer l'interface du site avec du code HTML et CSS en suivant une maquette. Durant ce projet, j'ai appris les rudiments de la programmation web, comme les langages HTML et CSS. J'ai aussi appris à me servir du logiciel Figma qui permet de consulter et créer des maquettes pour les sites web.",
-            "img": "/projects/booki1.webp",
-            "skills": [
-                "HTML",
-                "CSS"
-            ],
-            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-3/Projet-3/Booki"
-        },
-        {
             "title": "Site de menus Ohmyfood",
             "description": "Pour le projet Ohmyfood, j'ai utilisé Sass qui permet d'étendre les fonctionnalités du langage CSS. La particularité de ce projet était le \"mobile first\" et la création de diverses animations comme un loader, des transitions dans l'apparition des menus ou encore des changements de style au survol de la souris. ",
             "img": "/projects/ohmyfood1.webp",
@@ -77,6 +67,18 @@
                 "Swagger"
             ],
             "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-11/Projet-11/ArgentBank-website"
+        }
+    ],
+    "perso": [
+        {
+            "title": "Site de photographe",
+            "description": "Angular et php",
+            "img": "",
+            "skills": [
+                "Angular",
+                "Php",
+                "Scss"
+            ]
         }
     ]
 }
