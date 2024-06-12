@@ -24,7 +24,7 @@ export default function HomeCard({ title, text }) {
             !isOpen ? "bg" : "bg-light"
           }`}
         >
-          <h1>{title}</h1>
+          <h2>{title}</h2>
           <div className="mt1">{textArray}</div>
         </div>
       </div>

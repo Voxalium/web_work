@@ -10,11 +10,13 @@ function Home() {
   });
   return (
     <motion.main
-      className="Home row fullcenter animationFadeIn "
+      className="Home col fullcenter animationFadeIn "
       initial={{ y: "100%" }}
       animate={{ y: "0" }}
       transition={transition}
     >
+      <h1 className="mb1">Terence Truyens, développeur web</h1>
+
       <HomeCard
         title="Bonjour"
         text={[

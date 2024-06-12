@@ -12,7 +12,7 @@ export default function Collapse({ title, data }) {
       className={`${isOpen ? "open" : "close"} Collapse col `}
     >
       <h3 className="pdl1 br12">{title}</h3>
-      <div className="col cards gap15 mt1">
+      <div className="col cards gap15 mt1 mb1">
         {data.map((d, idx) => (
           <ProjectCard
             key={idx}
