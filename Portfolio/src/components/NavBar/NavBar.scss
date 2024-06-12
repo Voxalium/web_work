@@ -6,18 +6,15 @@
   width: 100%;
   backdrop-filter: blur(10px);
   z-index: 100;
-  border-radius: 0 0 12px 12px;
   p {
     padding: 2px;
   }
   .NavLink:hover {
-    background-color: var(--bgColor2);
-    color: black;
+    background-color: var(--mainColor);
   }
 }
 .active {
   transition: 100ms linear;
-  background-color: var(--bgColor2);
-  color: black;
+  background-color: var(--mainColor);
   box-shadow: inset #00000080 0 0 0.5em;
 }

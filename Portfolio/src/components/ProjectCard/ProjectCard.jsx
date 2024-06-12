@@ -6,13 +6,13 @@ export default function ProjectCard({ title, description, img, tag, link }) {
         <h4>{title}</h4>
         <p className="mt1">{description}</p>
         {link ? (
-          <a className="mt08" href={link} target="_blank" rel="noreferrer">
+          <a className="mt08 mb08" href={link} target="_blank" rel="noreferrer">
             Voir Github
           </a>
         ) : null}
         <div className="row tags gap05">
           {tag.map((t, idx) => (
-            <span key={idx} className="tag pd05">
+            <span key={idx} className="tag pd02">
               {t}
             </span>
           ))}

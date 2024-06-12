@@ -9,6 +9,7 @@
   --bgColor2: #fff;
   --btnColor: #898989;
   --btnColorLight: #999999;
+  --mainColor: #f81;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -26,12 +27,24 @@ main,
 #root {
   height: 100%;
 }
-.App {
-  position: relative;
-}
 a {
   text-decoration: none;
   color: inherit;
+}
+p {
+  font-size: 1rem;
+  @media (max-width: 920px) {
+    font-size: 0.8rem;
+  }
+}
+span {
+  font-size: 1rem;
+  @media (max-width: 920px) {
+    font-size: 0.8rem;
+  }
+}
+.App {
+  position: relative;
 }
 .translate {
   transform: translateY(50px);
@@ -90,10 +103,12 @@ a {
 .mt08 {
   margin-top: 0.8rem;
 }
+.mb08 {
+  margin-bottom: 0.8rem;
+}
 .mt1 {
   margin-top: 1rem;
 }
-
 .mb1 {
   margin-bottom: 1rem;
 }
@@ -114,6 +129,9 @@ a {
 }
 .bg-light {
   background-color: var(--bgColorLight);
+}
+.pd02 {
+  padding: 0.2rem;
 }
 .pd05 {
   padding: 0.5rem;
@@ -182,4 +200,3 @@ a {
 @import "../components/ProjectCard/ProjectCard.scss";
 @import "../components/ScrollBar/ScrollBar.scss";
 @import "../components/Collapse/Collapse.scss";
-

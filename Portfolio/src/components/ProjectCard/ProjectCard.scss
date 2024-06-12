@@ -9,21 +9,26 @@
   backdrop-filter: blur(10px);
   img {
     background-color: white;
+    height: auto;
   }
   .text {
     width: 100%;
     p {
       max-width: 50%;
+      @media (max-width: 920px) {
+        max-width: 80%;
+      }
     }
     h3 {
       text-align: center;
     }
     a {
-      color: red;
+      color: var(--mainColor);
+      text-decoration: underline;
     }
     .tag {
-      background-color: white;
-      color: #000;
+      background-color: var(--mainColor);
+      color: #fff;
       border-radius: 5px;
     }
   }

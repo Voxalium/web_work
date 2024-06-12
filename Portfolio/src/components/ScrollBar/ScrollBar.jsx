@@ -12,5 +12,5 @@ export default function ScrollBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
-  return <div style={{ width: width + "%" }} className="ScrollBar mt15"></div>;
+  return <div style={{ width: width + "%" }} className="ScrollBar"></div>;
 }
