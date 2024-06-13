@@ -1,21 +1,16 @@
 import { useEffect } from "react";
 import HomeCard from "../../components/HomeCard/HomeCard";
 import mouseAim from "../../scripts/mouseAim";
-import { transition } from "../../scripts/transition";
-import { motion } from "framer-motion";
+
+import transition from "../../scripts/transition";
 
 function Home() {
   useEffect(() => {
     mouseAim(".Home", ".outer");
   });
   return (
-    <motion.main
-      className="Home col fullcenter animationFadeIn "
-      initial={{ y: "100%" }}
-      animate={{ y: "0" }}
-      transition={transition}
-    >
-      <h1 className="mb1">Terence Truyens, développeur web</h1>
+    <main className="Home col fullcenter animationFadeIn ">
+      <h1 className="mb1 textcenter">Terence Truyens, développeur web</h1>
 
       <HomeCard
         title="Bonjour"
@@ -25,8 +20,8 @@ function Home() {
           "Durant cette formation, j'ai aussi appris à organiser un projet avec les méthodes AGILE, à debugger des sites et faire des tests unitaires et fonctionnels avec JEST.",
         ]}
       />
-    </motion.main>
+    </main>
   );
 }
 
-export default Home;
+export default transition(Home);

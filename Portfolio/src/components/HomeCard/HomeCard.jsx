@@ -16,7 +16,7 @@ export default function HomeCard({ title, text }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="card">
+    <div className="card col fullcenter">
       <div className="outer br12 col fullcenter ">
         <div
           onClick={() => setIsOpen((isOpen) => !isOpen)}
@@ -25,7 +25,7 @@ export default function HomeCard({ title, text }) {
           }`}
         >
           <h2>{title}</h2>
-          <div className="mt1">{textArray}</div>
+          <div className="text mt1 col fullcenter">{textArray}</div>
         </div>
       </div>
       <div

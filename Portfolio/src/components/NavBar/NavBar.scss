@@ -6,11 +6,19 @@
   width: 100%;
   backdrop-filter: blur(10px);
   z-index: 100;
+
   p {
     padding: 2px;
   }
   .NavLink:hover {
     background-color: var(--mainColor);
+  }
+
+  .row {
+    @media (max-width: 400px) {
+      padding: 0;
+      justify-content: center;
+    }
   }
 }
 .active {
