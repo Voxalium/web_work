@@ -1,17 +1,14 @@
 import { useState } from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
-export default function Collapse({ title, data }) {
+export default function Collapse({ title, data, toggleModal }) {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div
-      onClick={() => handleClick()}
-      className={`${isOpen ? "open" : "close"} Collapse col `}
-    >
-      <h4 className="pdl1 br12">
+    <div className={`${isOpen ? "open" : "close"} Collapse col `}>
+      <h4 onClick={handleClick} className="pdl1 br12">
         {title}
         {isOpen ? (
           <span className="sign">-</span>
@@ -28,6 +25,7 @@ export default function Collapse({ title, data }) {
             img={d.img}
             link={d.link}
             tag={d.skills}
+            toggleModal={toggleModal}
           />
         ))}
       </div>

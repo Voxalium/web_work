@@ -4,6 +4,10 @@
             "title": "Site de menus Ohmyfood",
             "description": "Pour le projet Ohmyfood, j'ai utilisé Sass qui permet d'étendre les fonctionnalités du langage CSS. La particularité de ce projet était le \"mobile first\" et la création de diverses animations comme un loader, des transitions dans l'apparition des menus ou encore des changements de style au survol de la souris. ",
             "img": "/projects/ohmyfood1.webp",
+            "gallery": [
+                "/projects/booki3.webp",
+                "/projects/booki3.webp"
+            ],
             "skills": [
                 "HTML",
                 "CSS",

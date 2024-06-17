@@ -2,7 +2,14 @@ import transition from "../../scripts/transition";
 import ScrollBar from "../../components/ScrollBar/ScrollBar";
 import Collapse from "../../components/Collapse/Collapse";
 import data from "../../datas/projects.json";
+import Modal from "../../components/Modal/Modal";
+import { useState } from "react";
 function Projects() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
   return (
     <>
       <ScrollBar />
@@ -15,12 +22,18 @@ function Projects() {
             <Collapse
               title="Projets de ma formation Open Classrooms"
               data={data.projects}
+              toggleModal={toggleModal}
             />
-            <Collapse title="Projets personnels" data={data.perso} />
+            <Collapse
+              title="Projets personnels"
+              data={data.perso}
+              toggleModal={toggleModal}
+            />
             <h3>Autre</h3>
           </div>
         </div>
       </main>
+      {isModalOpen && <Modal toggleModal={toggleModal} />}
     </>
   );
 }
