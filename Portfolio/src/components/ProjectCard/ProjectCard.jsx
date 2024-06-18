@@ -12,13 +12,10 @@ export default function ProjectCard({
   };
   return (
     <article className="ProjectCard row br12 ">
-      <img
-        onClick={handleClickModal}
-        src={img}
-        alt={title}
-        width="266"
-        height="400"
-      />
+      <div onClick={handleClickModal} className="image pointer ">
+        <img src={img} alt={title} width="266" height="400" />
+        <span>Voir plus</span>
+      </div>
       <div className="text col mt1 mb1 align-center justify-between">
         <h5>{title}</h5>
         <p className="mt1">{description}</p>

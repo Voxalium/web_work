@@ -7,9 +7,25 @@
 
   background-color: var(--bgColorLightOp);
   backdrop-filter: blur(10px);
-  img {
-    background-color: white;
-    height: auto;
+  .image {
+    position: relative;
+    img {
+      background-color: white;
+      height: 100%;
+      &:hover {
+        filter: brightness(60%);
+      }
+    }
+    span {
+      position: absolute;
+      width: 100%;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      top: 50%;
+      left: 0;
+      pointer-events: none;
+    }
     @media (max-width: 700px) {
       display: none;
     }
