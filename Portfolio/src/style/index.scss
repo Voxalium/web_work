@@ -47,6 +47,9 @@ span {
 .App {
   position: relative;
 }
+.pointer {
+  cursor: pointer;
+}
 .translate {
   transform: translateY(50px);
 }
@@ -165,6 +168,16 @@ span {
 }
 
 //ANIMATION
+.animationFadeIn {
+  animation:
+    fade-in 1s ease-in,
+    BTT 2s;
+}
+.animationSize {
+  animation:
+    size 0.5s ease-in,
+    fade-in 0.5s ease-in;
+}
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -172,9 +185,6 @@ span {
   to {
     opacity: 100%;
   }
-}
-.animationFadeIn {
-  animation: ease-in 1s fade-in;
 }
 
 @keyframes fade-out {
@@ -185,6 +195,23 @@ span {
     opacity: 0;
   }
 }
+
+@keyframes BTT {
+  from {
+    transform: translateY(70%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes size {
+  from {
+    transform: scale(0%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0);
@@ -192,12 +219,6 @@ span {
   to {
     transform: rotate(360deg);
   }
-}
-
-.slide-in {
-  height: 100%;
-  width: 100%;
-  transform-origin: bottom;
 }
 
 @import "../pages/Home/Home.scss";
@@ -213,4 +234,3 @@ span {
 @import "../components/Collapse/Collapse.scss";
 @import "../components/Modal/Modal.scss";
 @import "../components/Slider/Slider.scss";
-

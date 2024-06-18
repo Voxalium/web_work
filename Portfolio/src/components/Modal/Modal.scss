@@ -2,20 +2,27 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
   height: 100%;
   width: 100%;
   background-color: #000000aa;
+
   .container {
     position: relative;
     z-index: 101;
-    width: 300px;
-    height: 300px;
     background-color: #121212;
+    width: 80%;
+    height: 60%;
 
+    .gallery {
+      height: 100%;
+      img {
+        max-width: 80%;
+      }
+    }
     .close {
-      position: absolute;
       top: 0;
+      right: 10px;
+      position: absolute;
     }
   }
 }

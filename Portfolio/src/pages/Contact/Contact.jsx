@@ -1,4 +1,3 @@
-import transition from "../../scripts/transition";
 import Button from "../../components/Button/Button";
 const email = "/img/envelope-regular.webp";
 const github = "/img/github.webp";
@@ -24,4 +23,4 @@ function Contact() {
     </main>
   );
 }
-export default transition(Contact);
+export default Contact;

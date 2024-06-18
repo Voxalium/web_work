@@ -6,7 +6,7 @@
             "img": "/projects/ohmyfood1.webp",
             "gallery": [
                 "/projects/booki3.webp",
-                "/projects/booki3.webp"
+                "/projects/booki2.webp"
             ],
             "skills": [
                 "HTML",
@@ -25,6 +25,9 @@
                 "HTML",
                 "CSS",
                 "Javascript"
+            ],
+            "gallery": [
+                "/projects/booki2.webp"
             ],
             "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-6/Projet-6/Portfolio-Sophie-Buel"
         },

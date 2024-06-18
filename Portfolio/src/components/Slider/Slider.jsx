@@ -1,20 +1,33 @@
-export default function Slider() {
+import { useState } from "react";
+
+export default function Slider({ gallery }) {
+  const [index, setIndex] = useState(0);
+
+  const handleGalleryIndex = (i) => {
+    let newIndex = index + i;
+    if (newIndex < 0) {
+      newIndex = gallery?.length - 1;
+    } else if (newIndex >= gallery?.length) {
+      newIndex = 0;
+    }
+    setIndex(newIndex);
+  };
+
   return (
-    <div className="Slider">
+    <div className="Slider ">
       <img
-        className="arrows leftArrow"
-        src="arrowLeft.wepb"
+        onClick={() => handleGalleryIndex(-1)}
+        className="arrows leftArrow pointer"
+        src="/img/arrow-right.svg"
         alt="fléche gauche"
       />
-
-      <div className="gallery">
-        {/*img.map((i, _) => (
-          <img key={_} src={i} alt={`${i}-img`} />
-        ))*/}
+      <div className="gallery row fullcenter">
+        {<img src={gallery[index]} alt="img" />}
       </div>
       <img
-        className="arrows rightArrow"
-        src="arrowRight.wepb"
+        onClick={() => handleGalleryIndex(1)}
+        className="arrows rightArrow pointer"
+        src="/img/arrow-right.svg"
         alt="fléche droite"
       />
     </div>

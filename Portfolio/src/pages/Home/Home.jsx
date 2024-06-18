@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import HomeCard from "../../components/HomeCard/HomeCard";
 import mouseAim from "../../scripts/mouseAim";
 
-import transition from "../../scripts/transition";
-
 function Home() {
   useEffect(() => {
     mouseAim(".Home", ".outer");
@@ -24,4 +22,4 @@ function Home() {
   );
 }
 
-export default transition(Home);
+export default Home;

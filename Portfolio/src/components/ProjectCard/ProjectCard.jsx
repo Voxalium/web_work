@@ -5,9 +5,10 @@ export default function ProjectCard({
   tag,
   link,
   toggleModal,
+  gallery,
 }) {
   const handleClickModal = () => {
-    toggleModal();
+    toggleModal(gallery || []);
   };
   return (
     <article className="ProjectCard row br12 ">

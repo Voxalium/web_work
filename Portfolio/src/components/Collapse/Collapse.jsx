@@ -25,6 +25,7 @@ export default function Collapse({ title, data, toggleModal }) {
             img={d.img}
             link={d.link}
             tag={d.skills}
+            gallery={d.gallery}
             toggleModal={toggleModal}
           />
         ))}
