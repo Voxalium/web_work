@@ -5,8 +5,8 @@
             "description": "Pour le projet Ohmyfood, j'ai utilisé Sass qui permet d'étendre les fonctionnalités du langage CSS. La particularité de ce projet était le \"mobile first\" et la création de diverses animations comme un loader, des transitions dans l'apparition des menus ou encore des changements de style au survol de la souris. ",
             "img": "/projects/ohmyfood1.webp",
             "gallery": [
-                "/projects/booki3.webp",
-                "/projects/booki2.webp"
+                "/projects/ohmyfood2.webp",
+                "/projects/ohmyfood3.webp"
             ],
             "skills": [
                 "HTML",
@@ -27,7 +27,9 @@
                 "Javascript"
             ],
             "gallery": [
-                "/projects/booki2.webp"
+                "/projects/sophiebuel2.webp",
+                "/projects/sophiebuel3.webp",
+                "/projects/sophiebuel4.webp"
             ],
             "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-6/Projet-6/Portfolio-Sophie-Buel"
         },
@@ -39,6 +41,12 @@
                 "Veille",
                 "Gestion",
                 "Doc technique"
+            ],
+            "gallery": [
+                "/projects/menumaker2.webp",
+                "/projects/menumaker3.webp",
+                "/projects/menumaker4.webp",
+                "/projects/menumaker5.webp"
             ]
         },
         {
@@ -49,7 +57,12 @@
                 "Optimisation",
                 "SEO"
             ],
-            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-9/Projet-9/ninacarducci"
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-9/Projet-9/ninacarducci",
+            "gallery": [
+                "/projects/ninacarducci2.webp",
+                "/projects/ninacarducci3.webp",
+                "/projects/ninacarducci4.webp"
+            ]
         },
         {
             "title": "Site 724events",
@@ -60,7 +73,12 @@
                 "Test",
                 "JEST"
             ],
-            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-10/Projet-10/Debuggez-une-application-React.JS"
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-10/Projet-10/Debuggez-une-application-React.JS",
+            "gallery": [
+                "/projects/724events2.webp",
+                "/projects/724events3.webp",
+                "/projects/724events4.webp"
+            ]
         },
         {
             "title": "Application bancaire Argent Bank",
@@ -73,7 +91,13 @@
                 "Mongo",
                 "Swagger"
             ],
-            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-11/Projet-11/ArgentBank-website"
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-11/Projet-11/ArgentBank-website",
+            "gallery": [
+                "/projects/argentbank2.webp",
+                "/projects/argentbank3.webp",
+                "/projects/argentbank4.webp",
+                "/projects/argentbank5.webp"
+            ]
         }
     ],
     "perso": [

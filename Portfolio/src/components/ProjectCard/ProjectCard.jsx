@@ -11,7 +11,7 @@ export default function ProjectCard({
     toggleModal(gallery || []);
   };
   return (
-    <article className="ProjectCard row br12 ">
+    <article className="ProjectCard br12 ">
       <div onClick={handleClickModal} className="image pointer ">
         <img src={img} alt={title} width="266" height="400" />
         <span>Voir plus</span>

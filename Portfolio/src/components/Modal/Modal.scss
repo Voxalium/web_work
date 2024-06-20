@@ -13,16 +13,17 @@
     width: 80%;
     height: 60%;
 
+    border-radius: 6px;
     .gallery {
       height: 100%;
-      img {
-        max-width: 80%;
-      }
     }
     .close {
       top: 0;
       right: 10px;
       position: absolute;
+      &:hover {
+        filter: brightness(0.9);
+      }
     }
   }
 }

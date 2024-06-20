@@ -21,7 +21,7 @@ function Projects() {
           <div className="col ">
             <h3 className="mt1 mb1">Développement web</h3>
             <Collapse
-              title="Projets de ma formation Open Classrooms"
+              title="Projets de ma formation"
               data={data.projects}
               toggleModal={toggleModal}
             />
