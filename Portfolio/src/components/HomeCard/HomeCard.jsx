@@ -26,6 +26,7 @@ export default function HomeCard({ title, text }) {
         >
           <h2>{title}</h2>
           <div className="text mt1 col fullcenter">{textArray}</div>
+          <div className="mt1 click">Cliquez pour plus d'information !</div>
         </div>
       </div>
       <div

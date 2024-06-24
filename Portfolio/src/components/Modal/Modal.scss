@@ -9,10 +9,10 @@
   .container {
     position: relative;
     z-index: 101;
-    background-color: #121212;
+    background-color: #121212aa;
     width: 80%;
     height: 60%;
-
+    backdrop-filter: blur(6px);
     border-radius: 6px;
     .gallery {
       height: 100%;

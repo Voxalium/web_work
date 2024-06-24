@@ -15,7 +15,8 @@
                 "Mobile",
                 "Animations"
             ],
-            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-4/Projet-4/Ohmyfood"
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-4/Projet-4/Ohmyfood",
+            "isFinished": true
         },
         {
             "title": "Site portfolio Sophie Buel",
@@ -31,7 +32,8 @@
                 "/projects/sophiebuel3.webp",
                 "/projects/sophiebuel4.webp"
             ],
-            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-6/Projet-6/Portfolio-Sophie-Buel"
+            "link": "https://github.com/Voxalium/OC-IntegrateurWeb/tree/Projet-6/Projet-6/Portfolio-Sophie-Buel",
+            "isFinished": true
         },
         {
             "title": "Site Menu Maker",
@@ -47,7 +49,8 @@
                 "/projects/menumaker3.webp",
                 "/projects/menumaker4.webp",
                 "/projects/menumaker5.webp"
-            ]
+            ],
+            "isFinished": true
         },
         {
             "title": "Site portfolio Nina Carducci",
@@ -62,7 +65,8 @@
                 "/projects/ninacarducci2.webp",
                 "/projects/ninacarducci3.webp",
                 "/projects/ninacarducci4.webp"
-            ]
+            ],
+            "isFinished": true
         },
         {
             "title": "Site 724events",
@@ -78,7 +82,8 @@
                 "/projects/724events2.webp",
                 "/projects/724events3.webp",
                 "/projects/724events4.webp"
-            ]
+            ],
+            "isFinished": true
         },
         {
             "title": "Application bancaire Argent Bank",
@@ -97,21 +102,29 @@
                 "/projects/argentbank3.webp",
                 "/projects/argentbank4.webp",
                 "/projects/argentbank5.webp"
-            ]
+            ],
+            "isFinished": true
         }
     ],
     "perso": [
         {
             "title": "Site de photographe",
-            "description": "Angular et php",
-            "img": "",
+            "description": "Ce projet est un site fictif de photographe, les images sont générées par IA. J'ai décidé de reproduire un des projets de ma formation pour apprendre Angular et PHP, par la même occasion, j'ai commencé à apprendre TypeScript. C'est mon premier projet fullstack.",
+            "img": "/projects/JohnDoe.webp",
             "skills": [
                 "Angular",
                 "TypeScript",
                 "PHP",
                 "SASS",
                 "Mongo"
-            ]
+            ],
+            "link": "https://github.com/Voxalium/web_work/tree/main/Projects/Photographe",
+            "gallery": [
+                "/projects/JohnDoe1.webp",
+                "/projects/JohnDoe2.webp",
+                "/projects/JohnDoe3.webp"
+            ],
+            "isFinished": false
         }
     ]
 }

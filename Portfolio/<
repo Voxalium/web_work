@@ -6,12 +6,15 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     position: relative;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--mainColor);
+    color: #f66;
+    text-shadow:
+      1px 1px 0 #000000aa,
+      -1px 1px 0 #000000aa,
+      -1px -1px 0 #000000aa,
+      1px -1px 0 #000000aa;
+
     cursor: pointer;
-    &:hover {
-      filter: brightness(1.2);
-    }
     span {
       display: block;
       position: absolute;

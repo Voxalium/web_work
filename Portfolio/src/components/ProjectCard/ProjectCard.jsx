@@ -6,6 +6,7 @@ export default function ProjectCard({
   link,
   toggleModal,
   gallery,
+  isFinished,
 }) {
   const handleClickModal = () => {
     toggleModal(gallery || []);
@@ -14,7 +15,12 @@ export default function ProjectCard({
     <article className="ProjectCard br12 ">
       <div onClick={handleClickModal} className="image pointer ">
         <img src={img} alt={title} width="266" height="400" />
-        <span>Voir plus</span>
+        <span className="plus">Voir plus</span>
+        {isFinished ? (
+          <span className="isFinished finished">Terminé</span>
+        ) : (
+          <span className="isFinished inProgress">En cours</span>
+        )}
       </div>
       <div className="text col mt1 mb1 align-center justify-between">
         <h5>{title}</h5>

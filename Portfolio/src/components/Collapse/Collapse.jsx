@@ -8,7 +8,7 @@ export default function Collapse({ title, data, toggleModal }) {
 
   return (
     <div className={`${isOpen ? "open" : "close"} Collapse col `}>
-      <h4 onClick={handleClick} className="pdl1 br12">
+      <h4 onClick={handleClick} className="pdl1 br05">
         {title}
         {isOpen ? (
           <span className="sign">-</span>
@@ -26,6 +26,7 @@ export default function Collapse({ title, data, toggleModal }) {
             link={d.link}
             tag={d.skills}
             gallery={d.gallery}
+            isFinished={d.isFinished}
             toggleModal={toggleModal}
           />
         ))}

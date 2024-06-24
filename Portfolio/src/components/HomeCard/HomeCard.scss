@@ -15,7 +15,11 @@
       margin: 2px;
 
       .text {
+        text-align: justify;
         max-width: 90%;
+      }
+      .click {
+        font-weight: 800;
       }
     }
     &::before {

@@ -15,7 +15,6 @@
   .image {
     position: relative;
     img {
-      background-color: white;
       height: 100%;
       &:hover {
         filter: brightness(60%);
@@ -26,7 +25,7 @@
         display: none;
       }
     }
-    span {
+    .plus {
       position: absolute;
       width: 100%;
       font-size: 2rem;
@@ -38,6 +37,20 @@
     }
     @media (max-width: 700px) {
       height: 80px;
+    }
+    .isFinished {
+      display: block;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 3px;
+    }
+    .finished {
+      background-color: green;
+    }
+    .inProgress {
+      background-color: red;
     }
   }
   .text {
