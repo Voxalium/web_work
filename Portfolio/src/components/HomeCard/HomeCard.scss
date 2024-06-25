@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 600px;
   @media (max-width: 680px) {
-    max-width: 90%;
+    max-width: 95%;
   }
   .outer {
     position: relative;
@@ -13,6 +13,9 @@
       position: relative;
       z-index: 1;
       margin: 2px;
+      @media (max-width: 680px) {
+        padding: 0px;
+      }
 
       .text {
         text-align: justify;
