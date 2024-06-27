@@ -6,7 +6,7 @@ function Contact() {
   return (
     <main className="Contact col fullcenter">
       <div className="container row pd15 br12 fullcenter gap15 animationFadeIn ">
-        <a href="mailto:terence.truyens@sfr.fr">
+        <a href="mailto:terence.truyens.dev@gmail.com">
           <Button text="Mon Email" img={email} />
         </a>
         <a
