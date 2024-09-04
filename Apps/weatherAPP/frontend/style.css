@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Roboto";
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  background: #222;
+}
+#city-form {
+  font-size: 0;
+}
+#city-label {
+  font-size: 1rem;
+  padding-right: 6px;
+}
+#city-button {
+  color: #eee;
+  background: #25a;
+  border: none;
+  height: 100%;
+  padding: 0 6px;
+}
+#city-button:hover {
+  cursor: pointer;
+}
+#city-input {
+  border: none;
+  height: 26px;
+  color: #333;
+  padding-left: 6px;
+}
+
+#city-input:focus {
+  outline: none;
+}
+
+#meteo {
+  display: flex;
+  gap: 12px;
+}
+
+#current {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#forecast {
+  margin-top: 32px;
+  display: flex;
+  gap: 10px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+}
+.icon {
+  max-width: 54px;
+}
+
+#error {
+  color: #f00;
+}
